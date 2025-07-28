@@ -18,6 +18,20 @@ export default {
 			}
 		},
 		extend: {
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'card': 'var(--shadow-card)',
+				'glow': 'var(--shadow-glow)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +65,14 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				brand: {
+					purple: 'hsl(var(--brand-purple))',
+					'purple-light': 'hsl(var(--brand-purple-light))',
+					blue: 'hsl(var(--brand-blue))',
+					green: 'hsl(var(--brand-green))',
+					orange: 'hsl(var(--brand-orange))',
+					pink: 'hsl(var(--brand-pink))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
