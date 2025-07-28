@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Header = () => {
   return (
@@ -22,6 +23,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center space-x-3">
+            <ThemeToggle />
             <Button variant="outline" className="hidden sm:inline-flex">
               Contact Sales
             </Button>
