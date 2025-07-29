@@ -67,93 +67,100 @@ const ContactUs = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-hero overflow-hidden">
-        <div className="absolute inset-0 bg-background/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">
-                Contact Us
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Ready to transform your communication? Get in touch with our team and discover how Uniconnect Edge can revolutionize your business.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16">
+      <section className="relative py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
-            {/* Contact Information */}
-            <div className="lg:col-span-1 space-y-8">
+            {/* Left Side - Content */}
+            <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
-                <p className="text-muted-foreground mb-8">
-                  We're here to help you succeed. Reach out to us through any of these channels.
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  Talk with our sales team to see how{" "}
+                  <span className="bg-gradient-to-r from-brand-purple to-brand-blue bg-clip-text text-transparent">
+                    Uniconnect Edge
+                  </span>{" "}
+                  can fit your needs
+                </h1>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-5 h-5 rounded-full bg-brand-green flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-muted-foreground">Discuss the best solution to meet your business goals</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <div className="w-5 h-5 rounded-full bg-brand-green flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-muted-foreground">Get tailored pricing information</span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3">
+                    <div className="w-5 h-5 rounded-full bg-brand-green flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-muted-foreground">Discover how to streamline your communication workflows</span>
+                  </div>
+                </div>
+
+                <p className="text-sm text-muted-foreground mb-8">
+                  For technical or billing support, visit our{" "}
+                  <a href="#" className="text-brand-purple hover:underline">Help Center</a>
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
+              {/* Testimonial */}
+              <div className="bg-card p-6 rounded-xl border">
+                <blockquote className="text-lg font-medium mb-4">
+                  "Uniconnect Edge transformed our call center operations, saving us over 1,500 hours of staff time monthly and boosting our productivity by 30%."
+                </blockquote>
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold">JD</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Email Us</h3>
-                    <p className="text-muted-foreground">sales@uniconnect.ai</p>
-                    <p className="text-muted-foreground">support@uniconnect.ai</p>
+                    <p className="font-semibold">John Doe</p>
+                    <p className="text-sm text-muted-foreground">Operations Director | TechCorp Solutions</p>
                   </div>
                 </div>
+              </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Call Us</h3>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground">Mon-Fri, 9AM-6PM EST</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Visit Us</h3>
-                    <p className="text-muted-foreground">123 Business District</p>
-                    <p className="text-muted-foreground">San Francisco, CA 94105</p>
-                  </div>
+              {/* Trust Logos */}
+              <div className="space-y-4">
+                <p className="text-sm text-muted-foreground">Trusted by leading companies worldwide</p>
+                <div className="flex items-center space-x-8 opacity-60">
+                  <div className="text-2xl font-bold text-muted-foreground">MOTOROLA</div>
+                  <div className="text-2xl font-bold text-muted-foreground">UNIVERSAL</div>
+                  <div className="text-2xl font-bold text-muted-foreground">LIONSGATE</div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="border-0 shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Send us a Message</CardTitle>
-                  <CardDescription>
-                    Fill out the form below and we'll get back to you as soon as possible.
-                  </CardDescription>
+            {/* Right Side - Contact Form */}
+            <div className="lg:sticky lg:top-8">
+              <Card className="border shadow-card">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl">Contact our sales team</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="fullName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Full Name *</FormLabel>
                               <FormControl>
-                                <Input placeholder="Enter your full name" {...field} />
+                                <Input placeholder="First name*" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -165,9 +172,8 @@ const ContactUs = () => {
                           name="businessEmail"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Business Email *</FormLabel>
                               <FormControl>
-                                <Input placeholder="your.name@company.com" {...field} />
+                                <Input placeholder="Last name*" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -175,15 +181,40 @@ const ContactUs = () => {
                         />
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="businessEmail"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input placeholder="Work email*" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="companyName"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormControl>
+                              <Input placeholder="Job title" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <div className="grid grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="phoneNumber"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Phone Number</FormLabel>
                               <FormControl>
-                                <Input placeholder="+1 (555) 123-4567" {...field} />
+                                <Input placeholder="Phone number" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -195,9 +226,8 @@ const ContactUs = () => {
                           name="companyName"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Company Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="Your company name" {...field} />
+                                <Input placeholder="Company name*" {...field} />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -205,24 +235,24 @@ const ContactUs = () => {
                         />
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="grid grid-cols-2 gap-4">
                         <FormField
                           control={form.control}
                           name="subject"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Subject / Inquiry Type *</FormLabel>
                               <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                   <SelectTrigger>
-                                    <SelectValue placeholder="Select inquiry type" />
+                                    <SelectValue placeholder="Company size*" />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                  <SelectItem value="sales">Sales Inquiry</SelectItem>
-                                  <SelectItem value="support">Technical Support</SelectItem>
-                                  <SelectItem value="partnership">Partnership</SelectItem>
-                                  <SelectItem value="other">Other</SelectItem>
+                                  <SelectItem value="1-10">1-10 employees</SelectItem>
+                                  <SelectItem value="11-50">11-50 employees</SelectItem>
+                                  <SelectItem value="51-200">51-200 employees</SelectItem>
+                                  <SelectItem value="201-500">201-500 employees</SelectItem>
+                                  <SelectItem value="500+">500+ employees</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -235,10 +265,19 @@ const ContactUs = () => {
                           name="country"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Country / Location</FormLabel>
-                              <FormControl>
-                                <Input placeholder="Your country" {...field} />
-                              </FormControl>
+                              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormControl>
+                                  <SelectTrigger>
+                                    <SelectValue placeholder="What would you like to manage?*" />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent>
+                                  <SelectItem value="calls">Call Management</SelectItem>
+                                  <SelectItem value="crm">CRM Integration</SelectItem>
+                                  <SelectItem value="auto-dialer">Auto Dialing</SelectItem>
+                                  <SelectItem value="all">All Features</SelectItem>
+                                </SelectContent>
+                              </Select>
                               <FormMessage />
                             </FormItem>
                           )}
@@ -250,40 +289,12 @@ const ContactUs = () => {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Message / Description *</FormLabel>
                             <FormControl>
                               <Textarea 
-                                placeholder="Tell us about your needs, questions, or how we can help you..."
-                                className="min-h-[120px]"
+                                placeholder="Tell us more about your team and what work you'd like to manage with Uniconnect Edge"
+                                className="min-h-[100px] resize-none"
                                 {...field} 
                               />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="preferredContact"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Preferred Contact Method</FormLabel>
-                            <FormControl>
-                              <RadioGroup
-                                onValueChange={field.onChange}
-                                defaultValue={field.value}
-                                className="flex flex-row space-x-6"
-                              >
-                                <div className="flex items-center space-x-2">
-                                  <RadioGroupItem value="email" id="email" />
-                                  <label htmlFor="email" className="cursor-pointer">Email</label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                  <RadioGroupItem value="phone" id="phone" />
-                                  <label htmlFor="phone" className="cursor-pointer">Phone</label>
-                                </div>
-                              </RadioGroup>
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -302,16 +313,11 @@ const ContactUs = () => {
                               />
                             </FormControl>
                             <div className="space-y-1 leading-none">
-                              <label className="text-sm">
-                                I agree to the{" "}
-                                <a href="#" className="text-brand-purple hover:underline">
-                                  Terms & Conditions
-                                </a>{" "}
-                                and{" "}
+                              <label className="text-xs text-muted-foreground">
+                                By clicking submit, I acknowledge Uniconnect's{" "}
                                 <a href="#" className="text-brand-purple hover:underline">
                                   Privacy Policy
                                 </a>
-                                *
                               </label>
                               <FormMessage />
                             </div>
@@ -321,10 +327,10 @@ const ContactUs = () => {
 
                       <Button 
                         type="submit" 
-                        className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+                        className="w-full bg-brand-purple hover:bg-brand-purple/90 text-white rounded-lg h-12"
                         size="lg"
                       >
-                        Send Message
+                        Submit
                       </Button>
                     </form>
                   </Form>
