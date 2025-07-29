@@ -16,10 +16,10 @@ const Header = () => {
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Home</a>
+              <a href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Home</a>
               <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#products" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Products</a>
-              <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
+              <a href="/contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
               <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
             </nav>
           </div>
