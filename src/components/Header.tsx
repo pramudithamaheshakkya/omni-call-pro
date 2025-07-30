@@ -1,5 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   return (
@@ -15,13 +24,142 @@ const Header = () => {
               />
             </div>
             
-            <nav className="hidden md:flex items-center space-x-8">
-              <a href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Home</a>
-              <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Features</a>
-              <a href="#products" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Products</a>
-              <a href="/contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Contact Us</a>
-              <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">About</a>
-            </nav>
+            <NavigationMenu className="hidden md:flex">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuLink href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                    Home
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+                
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium">Features</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[600px] gap-3 p-6 md:w-[700px] md:grid-cols-2">
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-medium leading-none text-muted-foreground uppercase tracking-wider">Categories</h4>
+                        <div className="space-y-3">
+                          <NavigationMenuLink href="#crm" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">CRM (Customer Relationship Management)</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Manage customer relationships and data efficiently
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#campaign" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Campaign Management</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Create and manage marketing campaigns
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#omnichannel" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Omni-Channel Communication</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Connect across all communication channels
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#workflow" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Workflow Automation</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Automate business processes and workflows
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#reports" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Reports & Dashboards</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Analytics and reporting tools
+                            </p>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-medium leading-none text-muted-foreground uppercase tracking-wider">Advanced Features</h4>
+                        <div className="space-y-3">
+                          <NavigationMenuLink href="#ai" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Artificial Intelligence (AI)</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              AI-powered insights and automation
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#ai-agent" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">AI Agent (Virtual Assistant)</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Intelligent virtual assistant capabilities
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#integration" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Third-Party Integration</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Connect with external tools and services
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#workflow-management" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Workflow Management</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Advanced workflow design and management
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#access-control" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Access Control</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Security and permission management
+                            </p>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium">Product</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[400px] gap-3 p-6">
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-medium leading-none text-muted-foreground uppercase tracking-wider">Solutions</h4>
+                        <div className="space-y-3">
+                          <NavigationMenuLink href="#edge" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Edge</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Edge computing solutions for real-time processing
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#cloud" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Cloud</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Scalable cloud-based platform solutions
+                            </p>
+                          </NavigationMenuLink>
+                          <NavigationMenuLink href="#enterprise" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                            <div className="text-sm font-medium leading-none">Enterprise</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              Enterprise-grade solutions for large organizations
+                            </p>
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink href="#use-case" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                    Use Case
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink href="/contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                    Contact Us
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                    About Us
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
           
           <div className="flex items-center space-x-3">
