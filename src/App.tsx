@@ -6,6 +6,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import ContactUs from "./pages/ContactUs";
+import Security from "./pages/Security";
+import TermsAndPrivacy from "./pages/TermsAndPrivacy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PrivacyChoices from "./pages/PrivacyChoices";
+import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +25,11 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/security" element={<Security />} />
+            <Route path="/terms-and-privacy" element={<TermsAndPrivacy />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/privacy-choices" element={<PrivacyChoices />} />
+            <Route path="/support" element={<Support />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

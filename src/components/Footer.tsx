@@ -61,10 +61,12 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               © 2024 Uniconnect Edge. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Support</a>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 md:mt-0">
+              <a href="/security" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Security</a>
+              <a href="/terms-and-privacy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Terms and Privacy</a>
+              <a href="/privacy-policy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</a>
+              <a href="/privacy-choices" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Your Privacy Choices</a>
+              <a href="/support" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Support</a>
             </div>
           </div>
         </div>
