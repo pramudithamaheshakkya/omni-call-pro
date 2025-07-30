@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 25%;
 
-    --primary: 262 83% 58%;
+    --primary: 203 98% 47%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 250 60% 96%;
-    --secondary-foreground: 220 15% 25%;
+    --secondary: 222 65% 45%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 250 60% 96%;
     --muted-foreground: 220 15% 60%;
 
-    --accent: 262 83% 58%;
+    --accent: 211 100% 19%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -38,23 +38,23 @@ All colors MUST be HSL.
 
     --radius: 12px;
 
-    /* Custom design tokens inspired by Monday.com */
-    --brand-purple: 262 83% 58%;
-    --brand-purple-light: 262 83% 68%;
-    --brand-blue: 214 100% 60%;
+    /* Custom design tokens with new brand colors */
+    --brand-primary: 203 98% 47%;
+    --brand-secondary: 222 65% 45%;
+    --brand-dark: 211 100% 19%;
+    --brand-blue: 203 98% 47%;
     --brand-green: 142 76% 36%;
     --brand-orange: 25 95% 53%;
-    --brand-pink: 328 86% 70%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-purple)), hsl(var(--brand-blue)));
-    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(214 100% 60%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)), hsl(var(--brand-secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(203 98% 47%), hsl(222 65% 45%));
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(250 60% 98%));
     
     /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(262 83% 58% / 0.1), 0 2px 4px -1px hsl(262 83% 58% / 0.06);
-    --shadow-card: 0 10px 15px -3px hsl(262 83% 58% / 0.1), 0 4px 6px -2px hsl(262 83% 58% / 0.05);
-    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.15);
+    --shadow-soft: 0 4px 6px -1px hsl(203 98% 47% / 0.1), 0 2px 4px -1px hsl(203 98% 47% / 0.06);
+    --shadow-card: 0 10px 15px -3px hsl(203 98% 47% / 0.1), 0 4px 6px -2px hsl(203 98% 47% / 0.05);
+    --shadow-glow: 0 0 40px hsl(203 98% 47% / 0.15);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
