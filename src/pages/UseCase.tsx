@@ -21,7 +21,13 @@ const UseCase = () => {
       title: "Marketing",
       subtitle: "& Brand",
       description: "Launch impactful campaigns",
-      color: "bg-gradient-to-br from-sky-400 to-cyan-500",
+      color: "bg-primary",
+      summary: [
+        "Campaign automation",
+        "Lead generation",
+        "Brand management",
+        "Analytics tracking"
+      ],
       features: [
         "Email Campaign Management - Create, schedule, and track email campaigns",
         "Lead Scoring & Qualification - Automatically score leads based on behavior",
@@ -36,7 +42,13 @@ const UseCase = () => {
       title: "Project Management",
       subtitle: "& Tasks",
       description: "Deliver on time, every time",
-      color: "bg-gradient-to-br from-purple-500 to-indigo-600",
+      color: "bg-secondary",
+      summary: [
+        "Task management",
+        "Team collaboration",
+        "Resource planning",
+        "Progress tracking"
+      ],
       features: [
         "Task Assignment & Tracking - Assign tasks to team members and track progress",
         "Project Timeline Management - Visual timeline and milestone tracking",
@@ -51,7 +63,13 @@ const UseCase = () => {
       title: "Sales",
       subtitle: "& Revenue",
       description: "Focus on the most promising deals",
-      color: "bg-gradient-to-br from-emerald-400 to-teal-500",
+      color: "bg-accent",
+      summary: [
+        "Pipeline management",
+        "Deal tracking",
+        "Revenue forecasting",
+        "Customer insights"
+      ],
       features: [
         "Lead Management - Track leads from source to conversion",
         "Sales Pipeline - Visual pipeline with drag-and-drop functionality",
@@ -66,7 +84,13 @@ const UseCase = () => {
       title: "Developers",
       subtitle: "& Software",
       description: "Amplify sprint velocity",
-      color: "bg-gradient-to-br from-green-500 to-emerald-600",
+      color: "bg-primary",
+      summary: [
+        "Bug tracking",
+        "Sprint planning",
+        "Code reviews",
+        "Release management"
+      ],
       features: [
         "Bug Tracking & Resolution - Track and manage software issues",
         "Sprint Planning - Plan and manage development sprints",
@@ -81,7 +105,13 @@ const UseCase = () => {
       title: "HR",
       subtitle: "& Recruiting",
       description: "Secure top talent effortlessly",
-      color: "bg-gradient-to-br from-purple-600 to-violet-700",
+      color: "bg-secondary",
+      summary: [
+        "Talent acquisition",
+        "Employee onboarding",
+        "Performance tracking",
+        "Training programs"
+      ],
       features: [
         "Candidate Tracking - Manage job applications and candidates",
         "Employee Onboarding - Streamline new hire processes",
@@ -96,7 +126,13 @@ const UseCase = () => {
       title: "IT",
       subtitle: "& Support",
       description: "Resolve tickets 10 times faster",
-      color: "bg-gradient-to-br from-red-400 to-pink-500",
+      color: "bg-accent",
+      summary: [
+        "Ticket resolution",
+        "Asset management",
+        "System monitoring",
+        "User support"
+      ],
       features: [
         "Ticket Management - Track and resolve IT support requests",
         "Asset Management - Manage IT equipment and software licenses",
@@ -111,7 +147,13 @@ const UseCase = () => {
       title: "Operations",
       subtitle: "& Finance",
       description: "Scale operations seamlessly",
-      color: "bg-gradient-to-br from-blue-600 to-indigo-700",
+      color: "bg-primary",
+      summary: [
+        "Process automation",
+        "Financial reporting",
+        "Quality control",
+        "Cost management"
+      ],
       features: [
         "Process Automation - Automate routine operational tasks",
         "Inventory Management - Track and manage inventory levels",
@@ -126,7 +168,13 @@ const UseCase = () => {
       title: "Construction",
       subtitle: "& Building",
       description: "Manage projects from blueprint to completion",
-      color: "bg-gradient-to-br from-orange-500 to-red-600",
+      color: "bg-secondary",
+      summary: [
+        "Project scheduling",
+        "Safety compliance",
+        "Resource allocation",
+        "Progress monitoring"
+      ],
       features: [
         "Project Scheduling - Plan construction timelines and milestones",
         "Resource Management - Manage equipment, materials, and labor",
@@ -157,39 +205,47 @@ const UseCase = () => {
               key={useCase.id}
               open={openItems.includes(useCase.id)}
               onOpenChange={() => toggleItem(useCase.id)}
+              className="h-fit"
             >
               <CollapsibleTrigger asChild>
-                <div className={`${useCase.color} rounded-2xl p-6 text-white cursor-pointer transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl`}>
-                  <div className="space-y-4">
+                <div className={`${useCase.color} rounded-lg p-6 text-white cursor-pointer transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl aspect-square flex flex-col justify-between`}>
+                  <div className="space-y-3">
                     <div>
-                      <h3 className="text-2xl font-bold">{useCase.title}</h3>
-                      <p className="text-lg opacity-90">{useCase.subtitle}</p>
+                      <h3 className="text-xl font-bold">{useCase.title}</h3>
+                      <p className="text-sm opacity-90">{useCase.subtitle}</p>
                     </div>
-                    <p className="text-sm opacity-80">{useCase.description}</p>
-                    <div className="flex justify-between items-center">
-                      <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                        <div className="w-4 h-4 bg-white rounded-sm"></div>
-                      </div>
-                      <ChevronDown 
-                        className={`h-5 w-5 transition-transform duration-200 ${
-                          openItems.includes(useCase.id) ? 'rotate-180' : ''
-                        }`} 
-                      />
+                    <div className="space-y-1">
+                      {useCase.summary.map((point, index) => (
+                        <div key={index} className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                          <span className="text-xs opacity-80">{point}</span>
+                        </div>
+                      ))}
                     </div>
+                  </div>
+                  <div className="flex justify-between items-center mt-4">
+                    <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
+                      <div className="w-3 h-3 bg-white rounded-sm"></div>
+                    </div>
+                    <ChevronDown 
+                      className={`h-4 w-4 transition-transform duration-200 ${
+                        openItems.includes(useCase.id) ? 'rotate-180' : ''
+                      }`} 
+                    />
                   </div>
                 </div>
               </CollapsibleTrigger>
               
               <CollapsibleContent className="mt-4">
-                <div className="bg-card border rounded-xl p-6 shadow-sm">
-                  <h4 className="text-lg font-semibold text-foreground mb-4">
+                <div className={`${useCase.color} rounded-lg p-6 shadow-sm text-white`}>
+                  <h4 className="text-lg font-semibold mb-4">
                     CRM Features for {useCase.title}
                   </h4>
                   <ul className="space-y-3">
                     {useCase.features.map((feature, index) => (
                       <li key={index} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-muted-foreground text-sm">{feature}</span>
+                        <div className="w-2 h-2 bg-white/60 rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-sm opacity-90">{feature}</span>
                       </li>
                     ))}
                   </ul>
