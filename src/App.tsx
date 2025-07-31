@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import ContactUs from "./pages/ContactUs";
+import UseCase from "./pages/UseCase";
 import Security from "./pages/Security";
 import TermsAndPrivacy from "./pages/TermsAndPrivacy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -25,6 +26,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/use-case" element={<UseCase />} />
             <Route path="/security" element={<Security />} />
             <Route path="/terms-and-privacy" element={<TermsAndPrivacy />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

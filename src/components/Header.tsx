@@ -142,7 +142,7 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink href="#use-case" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                  <NavigationMenuLink href="/use-case" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
                     Use Case
                   </NavigationMenuLink>
                 </NavigationMenuItem>
