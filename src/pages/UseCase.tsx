@@ -21,7 +21,7 @@ const UseCase = () => {
       title: "Marketing",
       subtitle: "& Brand",
       description: "Launch impactful campaigns",
-      color: "bg-primary",
+      color: "bg-[#5CC2E2]",
       summary: [
         "Campaign automation",
         "Lead generation",
@@ -42,7 +42,7 @@ const UseCase = () => {
       title: "Project Management",
       subtitle: "& Tasks",
       description: "Deliver on time, every time",
-      color: "bg-secondary",
+      color: "bg-[#ED6571]",
       summary: [
         "Task management",
         "Team collaboration",
@@ -63,7 +63,7 @@ const UseCase = () => {
       title: "Sales",
       subtitle: "& Revenue",
       description: "Focus on the most promising deals",
-      color: "bg-accent",
+      color: "bg-[#1A187E]",
       summary: [
         "Pipeline management",
         "Deal tracking",
@@ -84,7 +84,7 @@ const UseCase = () => {
       title: "Developers",
       subtitle: "& Software",
       description: "Amplify sprint velocity",
-      color: "bg-primary",
+      color: "bg-[#5F67F6]",
       summary: [
         "Bug tracking",
         "Sprint planning",
@@ -105,7 +105,7 @@ const UseCase = () => {
       title: "HR",
       subtitle: "& Recruiting",
       description: "Secure top talent effortlessly",
-      color: "bg-secondary",
+      color: "bg-[#FD2254]",
       summary: [
         "Talent acquisition",
         "Employee onboarding",
@@ -126,7 +126,7 @@ const UseCase = () => {
       title: "IT",
       subtitle: "& Support",
       description: "Resolve tickets 10 times faster",
-      color: "bg-accent",
+      color: "bg-[#5BC67B]",
       summary: [
         "Ticket resolution",
         "Asset management",
@@ -147,7 +147,7 @@ const UseCase = () => {
       title: "Operations",
       subtitle: "& Finance",
       description: "Scale operations seamlessly",
-      color: "bg-primary",
+      color: "bg-[#613D6E]",
       summary: [
         "Process automation",
         "Financial reporting",
@@ -168,7 +168,7 @@ const UseCase = () => {
       title: "Construction",
       subtitle: "& Building",
       description: "Manage projects from blueprint to completion",
-      color: "bg-secondary",
+      color: "bg-[#899CF8]",
       summary: [
         "Project scheduling",
         "Safety compliance",
