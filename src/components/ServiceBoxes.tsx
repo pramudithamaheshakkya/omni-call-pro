@@ -6,7 +6,8 @@ const ServiceBoxes = () => {
       color: "#5CC2E2",
       title: "Marketing",
       subtitle: "& Brand",
-      description: "Launch impactful campaigns ✨",
+      description: "Launch impactful campaigns",
+      sparkle: "✨",
       features: [
         "Campaign automation",
         "Lead generation", 
@@ -18,7 +19,8 @@ const ServiceBoxes = () => {
       color: "#ED6571",
       title: "Project Management",
       subtitle: "& Tasks", 
-      description: "Deliver on time, every time ✨",
+      description: "Deliver on time, every time",
+      sparkle: "✨",
       features: [
         "Task management",
         "Team collaboration",
@@ -30,7 +32,8 @@ const ServiceBoxes = () => {
       color: "#1A187E",
       title: "Sales",
       subtitle: "& Revenue",
-      description: "Focus on promising deals ✨",
+      description: "Focus on promising deals",
+      sparkle: "✨",
       features: [
         "Pipeline management",
         "Deal tracking",
@@ -42,7 +45,8 @@ const ServiceBoxes = () => {
       color: "#5F67F6", 
       title: "Developers",
       subtitle: "& Software",
-      description: "Amplify sprint velocity ✨",
+      description: "Amplify sprint velocity",
+      sparkle: "✨",
       features: [
         "Bug tracking",
         "Sprint planning",
@@ -54,7 +58,8 @@ const ServiceBoxes = () => {
       color: "#FD2254",
       title: "HR", 
       subtitle: "& Recruiting",
-      description: "Secure top talent effortlessly ✨",
+      description: "Secure top talent effortlessly",
+      sparkle: "✨",
       features: [
         "Talent acquisition",
         "Employee onboarding",
@@ -66,7 +71,9 @@ const ServiceBoxes = () => {
       color: "#5BC67B",
       title: "IT",
       subtitle: "& Support", 
-      description: "Resolve tickets 10 times faster ✨",
+      description: "Resolve tickets",
+      subDescription: "10 times faster",
+      sparkle: "✨",
       features: [
         "IT service desk",
         "Ticket management", 
@@ -78,7 +85,8 @@ const ServiceBoxes = () => {
       color: "#613D6E",
       title: "Operations",
       subtitle: "& Finance",
-      description: "Scale operations seamlessly ✨", 
+      description: "Scale operations seamlessly",
+      sparkle: "✨", 
       features: [
         "Process automation",
         "Financial reporting",
@@ -90,7 +98,8 @@ const ServiceBoxes = () => {
       color: "#899CF8",
       title: "Construction",
       subtitle: "& Building",
-      description: "Manage projects seamlessly ✨",
+      description: "Manage projects seamlessly",
+      sparkle: "✨",
       features: [
         "Project scheduling", 
         "Safety compliance",
@@ -106,30 +115,45 @@ const ServiceBoxes = () => {
         {boxes.map((box, index) => (
           <div
             key={index}
-            className="rounded-2xl p-8 text-white flex flex-col justify-between h-[400px] w-full max-w-[280px] mx-auto"
+            className="rounded-3xl p-6 text-white flex flex-col justify-between h-[420px] w-full max-w-[300px] mx-auto"
             style={{ backgroundColor: box.color }}
           >
             <div className="space-y-6">
-              <div className="space-y-1">
-                <h2 className="text-3xl font-light tracking-wide">{box.title}</h2>
-                <h3 className="text-2xl font-light tracking-wide opacity-90">{box.subtitle}</h3>
+              <div className="space-y-0">
+                <h2 className="text-4xl font-light leading-tight">{box.title}</h2>
+                <h3 className="text-4xl font-light leading-tight">{box.subtitle}</h3>
               </div>
               
-              <p className="text-base font-normal leading-relaxed">{box.description}</p>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-normal">{box.description}</span>
+                </div>
+                {box.subDescription && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg font-normal">{box.subDescription}</span>
+                    <span className="text-lg">{box.sparkle}</span>
+                  </div>
+                )}
+                {!box.subDescription && (
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{box.sparkle}</span>
+                  </div>
+                )}
+              </div>
               
               <div className="space-y-3">
                 {box.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-3">
-                    <div className="w-5 h-5 rounded-full bg-white bg-opacity-30 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-white" strokeWidth={2.5} />
+                    <div className="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-4 h-4 text-white" strokeWidth={2} />
                     </div>
-                    <span className="text-base font-normal opacity-95">{feature}</span>
+                    <span className="text-base font-normal">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
             
-            <button className="mt-8 bg-white text-gray-800 px-8 py-3 rounded-full font-medium text-base hover:bg-gray-100 transition-colors w-fit">
+            <button className="mt-6 bg-white text-gray-800 px-8 py-3 rounded-full font-medium text-base hover:bg-gray-100 transition-colors self-start">
               Get Started
             </button>
           </div>
