@@ -39,31 +39,31 @@ const Header = () => {
                       <div className="space-y-3">
                         <h4 className="text-sm font-medium leading-none text-muted-foreground uppercase tracking-wider">Categories</h4>
                         <div className="space-y-3">
-                          <NavigationMenuLink href="#crm" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/crm" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">CRM (Customer Relationship Management)</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Manage customer relationships and data efficiently
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#campaign" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/campaign-management" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Campaign Management</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Create and manage marketing campaigns
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#omnichannel" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/omnichannel" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Omni-Channel Communication</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Connect across all communication channels
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#workflow" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/workflow-automation" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Workflow Automation</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Automate business processes and workflows
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#reports" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/reports" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Reports & Dashboards</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Analytics and reporting tools
@@ -74,31 +74,31 @@ const Header = () => {
                       <div className="space-y-3">
                         <h4 className="text-sm font-medium leading-none text-muted-foreground uppercase tracking-wider">Advanced Features</h4>
                         <div className="space-y-3">
-                          <NavigationMenuLink href="#ai" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/ai" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Artificial Intelligence (AI)</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               AI-powered insights and automation
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#ai-agent" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/ai-agent" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">AI Agent (Virtual Assistant)</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Intelligent virtual assistant capabilities
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#integration" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/integration" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Third-Party Integration</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Connect with external tools and services
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#workflow-management" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/workflow-management" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Workflow Management</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Advanced workflow design and management
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#access-control" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/access-control" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Access Control</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Security and permission management
@@ -117,19 +117,19 @@ const Header = () => {
                       <div className="space-y-3">
                         <h4 className="text-sm font-medium leading-none text-muted-foreground uppercase tracking-wider">Solutions</h4>
                         <div className="space-y-3">
-                          <NavigationMenuLink href="#edge" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/edge" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Edge</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Edge computing solutions for real-time processing
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#cloud" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/cloud" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Cloud</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Scalable cloud-based platform solutions
                             </p>
                           </NavigationMenuLink>
-                          <NavigationMenuLink href="#enterprise" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                          <NavigationMenuLink href="/enterprise" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground">
                             <div className="text-sm font-medium leading-none">Enterprise</div>
                             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                               Enterprise-grade solutions for large organizations
