@@ -1,144 +1,195 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Target, BarChart3, Settings, ArrowRight, CheckCircle, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 const ValueProposition = () => {
-  const growthSteps = [
+  const growthPaths = [
     {
-      step: "01",
-      icon: <Target className="w-6 h-6" />,
-      title: "Start Smart",
-      subtitle: "Quick Setup & Instant Impact",
-      description: "Get up and running in minutes with our intuitive platform. No complex configurations—just immediate results.",
-      features: ["5-minute onboarding", "Pre-built templates", "Zero learning curve"],
-      color: "from-blue-500 to-blue-600",
-      accentColor: "bg-blue-100 text-blue-700"
+      title: "Smart Start & Setup",
+      subtitle: "& execution",
+      description: "Get up and running instantly with our intelligent onboarding that adapts to your business needs.",
+      tags: ["Quick deployment", "Smart configurations", "Zero training required"],
+      color: "bg-gradient-to-br from-purple-400 to-purple-500",
+      textColor: "text-white"
     },
     {
-      step: "02", 
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Scale Seamlessly",
-      subtitle: "Grow Without Growing Pains",
-      description: "Add team members, expand features, and increase capacity without missing a beat or breaking your budget.",
-      features: ["Flexible team scaling", "Usage-based pricing", "Enterprise-ready infrastructure"],
-      color: "from-emerald-500 to-emerald-600",
-      accentColor: "bg-emerald-100 text-emerald-700"
+      title: "Operational efficiency",
+      subtitle: "",
+      description: "Streamline workflows and boost productivity with AI-powered automation and intelligent routing.",
+      tags: ["AI-powered workflows", "Smart automation", "Resource optimization"],
+      color: "bg-gradient-to-br from-emerald-400 to-emerald-500",
+      textColor: "text-white"
     },
     {
-      step: "03",
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Optimize Continuously",
-      subtitle: "Data-Driven Growth",
-      description: "Leverage AI insights and real-time analytics to make smarter decisions and unlock new opportunities.",
-      features: ["Predictive analytics", "Performance insights", "Automated optimizations"],
-      color: "from-purple-500 to-purple-600",
-      accentColor: "bg-purple-100 text-purple-700"
-    },
-    {
-      step: "04",
-      icon: <Settings className="w-6 h-6" />,
-      title: "Innovate Together",
-      subtitle: "Future-Proof Partnership",
-      description: "Stay ahead with cutting-edge features, dedicated support, and a platform that evolves with your needs.",
-      features: ["Regular feature updates", "24/7 expert support", "Innovation roadmap access"],
-      color: "from-orange-500 to-orange-600",
-      accentColor: "bg-orange-100 text-orange-700"
+      title: "Real-time growth tracking",
+      subtitle: "",
+      description: "Monitor performance, identify opportunities, and scale with data-driven insights.",
+      tags: ["Analytics dashboards", "Growth metrics", "Performance insights"],
+      color: "bg-gradient-to-br from-slate-800 to-slate-900",
+      textColor: "text-white"
     }
   ];
 
+  const companyLogos = [
+    { name: "TechCorp", src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=120&h=60&fit=crop&crop=entropy" },
+    { name: "InnovateLab", src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop&crop=entropy" },
+    { name: "DataFlow", src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=120&h=60&fit=crop&crop=entropy" },
+    { name: "ScaleUp", src: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=120&h=60&fit=crop&crop=entropy" },
+    { name: "GrowthLab", src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=60&fit=crop&crop=entropy" },
+    { name: "TeamSync", src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=120&h=60&fit=crop&crop=entropy" }
+  ];
+
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 to-white relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-grid-slate-100 bg-grid-16 opacity-50"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-br from-emerald-200/30 to-blue-200/30 rounded-full blur-3xl"></div>
-      
-      <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-20">
-          <Badge variant="secondary" className="mb-6 bg-gradient-to-r from-blue-50 to-purple-50 text-slate-700 border-slate-200">
-            <Sparkles className="w-4 h-4 mr-2" />
-            Growth Journey
-          </Badge>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <p className="text-slate-600 mb-4 text-lg">Uniconnect for Enterprise</p>
           <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            Here's how you{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
-              grow with us
-            </span>
+            Here's how you grow with us
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            From startup to enterprise, we're with you every step of the way. 
-            Our platform grows, adapts, and evolves alongside your business.
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+            Explore the growth solution that leaders trust and teams love.
           </p>
+          <Button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full">
+            Contact sales
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         </div>
 
-        {/* Growth Journey Steps */}
-        <div className="relative">
-          {/* Connection line for desktop */}
-          <div className="hidden lg:block absolute top-24 left-1/2 transform -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
-          
-          <div className="grid lg:grid-cols-4 gap-8 lg:gap-4">
-            {growthSteps.map((step, index) => (
-              <div key={index} className="relative group">
-                {/* Step number indicator */}
-                <div className={`mx-auto w-16 h-16 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center text-white font-bold text-lg shadow-lg mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300`}>
-                  {step.step}
+        {/* Growth Path Cards */}
+        <div className="grid lg:grid-cols-3 gap-6 mb-20">
+          {growthPaths.map((path, index) => (
+            <Card key={index} className={`${path.color} ${path.textColor} border-0 rounded-3xl overflow-hidden relative min-h-[400px] group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}>
+              <CardContent className="p-8 h-full flex flex-col justify-between">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">
+                      {path.title}
+                    </h3>
+                    {path.subtitle && (
+                      <p className="text-xl opacity-90 mb-4">
+                        {path.subtitle}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    {path.tags.map((tag, tagIndex) => (
+                      <Badge 
+                        key={tagIndex} 
+                        variant="secondary" 
+                        className="bg-white/20 text-white border-white/30 hover:bg-white/30 transition-colors"
+                      >
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
 
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-500 group-hover:-translate-y-2 bg-white/80 backdrop-blur-sm">
-                  <CardContent className="p-8 text-center space-y-6">
-                    <div className={`mx-auto w-12 h-12 rounded-xl ${step.accentColor} flex items-center justify-center`}>
-                      {step.icon}
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-sm font-medium text-slate-500 mb-4">
-                        {step.subtitle}
-                      </p>
-                      <p className="text-slate-600 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
+                <div className="space-y-4">
+                  <p className="text-white/90 leading-relaxed">
+                    {path.description}
+                  </p>
+                  <Button 
+                    variant="ghost" 
+                    className="text-white hover:bg-white/20 p-0 h-auto font-semibold group-hover:translate-x-1 transition-transform"
+                  >
+                    <ArrowDown className="mr-2 h-4 w-4" />
+                    Explore
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-                    <div className="space-y-3">
-                      {step.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center justify-center gap-2 text-sm text-slate-600">
-                          <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+        {/* Company Logos */}
+        <div className="text-center">
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            {companyLogos.map((logo, index) => (
+              <div key={index} className="flex items-center justify-center">
+                <img 
+                  src={logo.src} 
+                  alt={logo.name} 
+                  className="h-12 object-contain filter contrast-0 hover:contrast-100 transition-all duration-300"
+                />
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-20">
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-12 text-white relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-            <div className="relative">
-              <h3 className="text-3xl font-bold mb-4">
-                Ready to start your growth journey?
+        {/* Detailed Sections */}
+        <div className="mt-32 space-y-32">
+          {/* Smart Start Section */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h3 className="text-4xl font-bold text-slate-900 mb-6">
+                Smart Start & Setup
               </h3>
-              <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses that chose to grow smarter, not harder.
+              <p className="text-xl text-slate-600 mb-8">
+                Get your team productive from day one with intelligent onboarding that understands your business needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 text-lg font-semibold">
-                  Start Your Journey
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg">
-                  See How It Works
-                </Button>
+              
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
+                    <ArrowDown className="mr-2 h-5 w-5 text-purple-500" />
+                    Quick deployment
+                  </h4>
+                  <p className="text-slate-600 ml-7">
+                    Set up your entire communication infrastructure in minutes, not days
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
+                    <ArrowDown className="mr-2 h-5 w-5 text-purple-500" />
+                    Smart configurations
+                  </h4>
+                  <p className="text-slate-600 ml-7">
+                    AI automatically configures optimal settings based on your team size and industry
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
+                    <ArrowDown className="mr-2 h-5 w-5 text-purple-500" />
+                    Zero training required
+                  </h4>
+                  <p className="text-slate-600 ml-7">
+                    Intuitive interface that your team can master in under 30 minutes
+                  </p>
+                </div>
               </div>
             </div>
+            
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&crop=entropy" 
+                alt="Smart Setup Dashboard" 
+                className="w-full rounded-2xl shadow-2xl"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-lg p-4 shadow-lg border">
+                <p className="text-sm font-semibold text-slate-900">Setup Complete</p>
+                <p className="text-xs text-slate-600">Ready in 5 minutes</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-slate-50 rounded-3xl p-16">
+            <h3 className="text-4xl font-bold text-slate-900 mb-6">
+              Ready to transform how you grow?
+            </h3>
+            <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses that chose to scale smarter with Uniconnect.
+            </p>
+            <Button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg rounded-full">
+              Contact sales
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </div>
