@@ -4,6 +4,7 @@ import ValueProposition from "@/components/ValueProposition";
 import Features from "@/components/Features";
 import BusinessValue from "@/components/BusinessValue";
 import SuccessStories from "@/components/SuccessStories";
+import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Features />
       <BusinessValue />
       <SuccessStories />
+      <Testimonials />
       <WhyChooseUs />
       <Footer />
     </div>
