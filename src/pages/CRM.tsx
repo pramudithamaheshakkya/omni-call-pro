@@ -6,61 +6,38 @@ import { Button } from "@/components/ui/button";
 import { Users, Database, Target, TrendingUp, Shield, Clock, Workflow, Brain, BarChart3, Globe, Lock, Check, Briefcase } from "lucide-react";
 
 const CRM = () => {
-  const businessValues = [
+  const keyFeatures = [
     {
-      value: "Boost Team Productivity",
-      feature: "AI-powered workflow builder with drag-and-drop interface",
-      impact: "Reduce manual tasks by 70% and accelerate team onboarding with intuitive automation tools that adapt to your business processes.",
-      color: "purple"
+      icon: <Workflow className="h-8 w-8" />,
+      title: "Custom Workflows",
+      description: "Design any business process — from lead tracking to post-sale engagement — using a powerful visual workflow builder. No developer required."
     },
     {
-      value: "Slash Operational Costs",
-      feature: "No-code platform eliminates need for custom development",
-      impact: "Save up to 80% on development costs and reduce IT overhead with self-service tools that empower every team member.",
-      color: "green"
+      icon: <Brain className="h-8 w-8" />,
+      title: "AI-Powered Intelligence",
+      description: "Leverage built-in AI to automatically score leads, suggest next actions, write emails, and predict customer behavior."
     },
     {
-      value: "Accelerate Sales Cycles",
-      feature: "Smart lead scoring and automated follow-ups",
-      impact: "Close deals 40% faster with AI-driven insights and automated nurturing sequences that engage prospects at the right time.",
-      color: "blue"
+      icon: <Target className="h-8 w-8" />,
+      title: "No-Code / Low-Code Platform",
+      description: "Anyone on your team can build custom modules, forms, dashboards, and automations without writing a single line of code."
     },
     {
-      value: "Enhance Customer Experience",
-      feature: "360-degree customer view with unified communications",
-      impact: "Improve customer satisfaction by 50% with personalized interactions and seamless handoffs across all touchpoints.",
-      color: "orange"
+      icon: <TrendingUp className="h-8 w-8" />,
+      title: "Flexible & Scalable",
+      description: "From startups to enterprises, our CRM grows with your business — and bends to your needs."
     },
     {
-      value: "Scale Without Limits",
-      feature: "Cloud-native architecture with flexible integrations",
-      impact: "Grow from startup to enterprise without system limitations—our platform scales with your business needs automatically.",
-      color: "pink"
+      icon: <Database className="h-8 w-8" />,
+      title: "Unified Dashboard",
+      description: "See everything in one place: contacts, conversations, tasks, campaigns, and reports — all fully customizable."
     },
     {
-      value: "Data-Driven Decisions",
-      feature: "Real-time analytics and predictive insights",
-      impact: "Make smarter decisions with AI-powered analytics that predict trends and identify opportunities before your competition.",
-      color: "blue"
+      icon: <Clock className="h-8 w-8" />,
+      title: "Automated Actions",
+      description: "Trigger follow-ups, alerts, email campaigns, or updates based on any user activity or condition."
     }
   ];
-
-  const getColorClasses = (color: string) => {
-    switch (color) {
-      case 'purple':
-        return 'bg-brand-purple/10 text-brand-purple border-brand-purple/20';
-      case 'green':
-        return 'bg-brand-green/10 text-brand-green border-brand-green/20';
-      case 'blue':
-        return 'bg-brand-blue/10 text-brand-blue border-brand-blue/20';
-      case 'orange':
-        return 'bg-brand-orange/10 text-brand-orange border-brand-orange/20';
-      case 'pink':
-        return 'bg-brand-pink/10 text-brand-pink border-brand-pink/20';
-      default:
-        return 'bg-brand-purple/10 text-brand-purple border-brand-purple/20';
-    }
-  };
 
   const useCases = [
     { title: "Sales Teams", description: "Manage pipelines, forecast revenue, close faster" },
@@ -122,51 +99,8 @@ const CRM = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
       </section>
 
-      {/* Business Value Section - Using home page layout */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Business Value That Drives Results
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See the direct impact our AI-powered CRM has on your bottom line and operational efficiency
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {businessValues.map((prop, index) => (
-              <Card key={index} className="border border-border/50 hover:border-brand-purple/30 hover:shadow-card transition-all duration-300 group">
-                <CardHeader className="space-y-3">
-                  <Badge variant="outline" className={`w-fit ${getColorClasses(prop.color)}`}>
-                    Business Value
-                  </Badge>
-                  <CardTitle className="text-xl text-foreground group-hover:text-brand-purple transition-colors">
-                    {prop.value}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="bg-muted/50 rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2">Key Feature:</h4>
-                    <p className="text-sm text-muted-foreground">
-                      {prop.feature}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">Impact on Your Business:</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {prop.impact}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features Section */}
-      <section className="py-24 bg-muted/30">
+      {/* Build Anything Section */}
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -183,38 +117,7 @@ const CRM = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Workflow className="h-8 w-8" />,
-                title: "Custom Workflows",
-                description: "Design any business process — from lead tracking to post-sale engagement — using a powerful visual workflow builder. No developer required."
-              },
-              {
-                icon: <Brain className="h-8 w-8" />,
-                title: "AI-Powered Intelligence",
-                description: "Leverage built-in AI to automatically score leads, suggest next actions, write emails, and predict customer behavior."
-              },
-              {
-                icon: <Target className="h-8 w-8" />,
-                title: "No-Code / Low-Code Platform",
-                description: "Anyone on your team can build custom modules, forms, dashboards, and automations without writing a single line of code."
-              },
-              {
-                icon: <TrendingUp className="h-8 w-8" />,
-                title: "Flexible & Scalable",
-                description: "From startups to enterprises, our CRM grows with your business — and bends to your needs."
-              },
-              {
-                icon: <Database className="h-8 w-8" />,
-                title: "Unified Dashboard",
-                description: "See everything in one place: contacts, conversations, tasks, campaigns, and reports — all fully customizable."
-              },
-              {
-                icon: <Clock className="h-8 w-8" />,
-                title: "Automated Actions",
-                description: "Trigger follow-ups, alerts, email campaigns, or updates based on any user activity or condition."
-              }
-            ].map((feature, index) => (
+            {keyFeatures.map((feature, index) => (
               <Card key={index} className="text-center h-full border-2 hover:border-primary/50 transition-all">
                 <CardHeader>
                   <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
