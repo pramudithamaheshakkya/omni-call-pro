@@ -154,7 +154,7 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                  <NavigationMenuLink href="/about-us" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
                     About Us
                   </NavigationMenuLink>
                 </NavigationMenuItem>
