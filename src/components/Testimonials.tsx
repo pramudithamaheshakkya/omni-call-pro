@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
@@ -36,6 +36,15 @@ const Testimonials = () => {
     }
   ];
 
+  // Auto-advance testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
@@ -48,127 +57,146 @@ const Testimonials = () => {
     const position = (index - currentIndex + testimonials.length) % testimonials.length;
     
     if (position === 0) {
-      return "z-30 transform rotate-0 scale-100";
+      return "z-30 opacity-100 transform translate-x-0 translate-y-0 rotate-0 scale-100";
     } else if (position === 1) {
-      return "z-20 transform rotate-2 scale-95 translate-x-4 translate-y-2";
-    } else if (position === 2) {
-      return "z-10 transform -rotate-1 scale-90 -translate-x-2 translate-y-4";
+      return "z-20 opacity-70 transform translate-x-6 translate-y-3 rotate-2 scale-95";
     } else {
-      return "z-0 transform rotate-3 scale-85 translate-x-8 translate-y-6 opacity-50";
+      return "z-10 opacity-40 transform translate-x-12 translate-y-6 -rotate-1 scale-90";
     }
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-muted/20 to-background relative overflow-hidden">
-      {/* Grid Background Pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Subtle Grid Background */}
+      <div className="absolute inset-0 opacity-[0.02]" 
+           style={{
+             backgroundImage: `linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)`,
+             backgroundSize: '24px 24px'
+           }}>
+      </div>
       
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-4 font-medium">
+        {/* Header Section */}
+        <div className="text-center mb-20 animate-fade-in">
+          <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6 font-medium">
             Testimonials
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
             Trusted by Founders<br />
             Backed by Results
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-md mx-auto">
             Results that speak through founder voices.
           </p>
         </div>
 
-        <div className="flex justify-center items-center min-h-[500px] relative">
-          {/* Navigation Buttons */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={prevTestimonial}
-            className="absolute left-0 z-40 rounded-full w-12 h-12 shadow-lg"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </Button>
-
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={nextTestimonial}
-            className="absolute right-0 z-40 rounded-full w-12 h-12 shadow-lg"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </Button>
-
+        {/* Main Card Display */}
+        <div className="flex justify-center items-center min-h-[600px] relative">
           {/* Testimonial Cards Stack */}
-          <div className="relative w-full max-w-lg">
-            {/* Clip/Pin Effect */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-40">
-              <div className="w-16 h-8 bg-gradient-to-b from-muted-foreground/20 to-muted-foreground/10 rounded-sm shadow-sm"></div>
+          <div className="relative w-full max-w-2xl">
+            {/* Paper Clip Effect */}
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
+              <div className="w-20 h-10 bg-gradient-to-b from-muted-foreground/15 to-muted-foreground/5 
+                            rounded-lg shadow-sm border border-muted-foreground/10
+                            before:content-[''] before:absolute before:top-1/2 before:left-1/2 
+                            before:w-3 before:h-3 before:bg-muted-foreground/20 before:rounded-full
+                            before:transform before:-translate-x-1/2 before:-translate-y-1/2">
+              </div>
             </div>
 
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={testimonial.id}
-                className={`absolute inset-0 bg-card border shadow-lg transition-all duration-500 ease-in-out ${getCardPosition(index)}`}
-                style={{
-                  transitionProperty: "transform, opacity, z-index"
-                }}
-              >
-                <CardContent className="p-8 h-full flex flex-col justify-between">
-                  {/* Company Logo/Name */}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-foreground tracking-wide">
-                      {testimonial.company}
-                    </h3>
-                  </div>
-
-                  {/* Quote */}
-                  <div className="flex-1 flex items-center">
-                    <blockquote className="text-lg leading-relaxed text-muted-foreground text-center">
-                      <span className="text-4xl text-muted-foreground/30 leading-none">"</span>
-                      <span className="block mt-2">{testimonial.quote}</span>
-                    </blockquote>
-                  </div>
-
-                  {/* Author Info */}
-                  <div className="flex items-center justify-between mt-8 pt-6 border-t border-border/50">
-                    <div className="flex items-center space-x-3">
-                      <img
-                        src={testimonial.avatar}
-                        alt={testimonial.author}
-                        className="w-12 h-12 rounded-full object-cover shadow-sm"
-                      />
-                      <div>
-                        <p className="font-semibold text-foreground">{testimonial.author}</p>
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                      </div>
+            {/* Stacked Cards Container */}
+            <div className="relative h-[500px]">
+              {testimonials.map((testimonial, index) => (
+                <Card
+                  key={testimonial.id}
+                  className={`absolute inset-0 bg-card border-0 shadow-2xl transition-all duration-700 ease-out ${getCardPosition(index)}
+                            rounded-2xl hover:shadow-3xl`}
+                  style={{
+                    boxShadow: index === currentIndex 
+                      ? '0 25px 50px -12px rgba(0, 0, 0, 0.25)' 
+                      : '0 10px 25px -5px rgba(0, 0, 0, 0.1)'
+                  }}
+                >
+                  <CardContent className="p-12 h-full flex flex-col">
+                    {/* Company Name */}
+                    <div className="text-center mb-8">
+                      <h3 className="text-3xl font-bold text-foreground tracking-wide uppercase">
+                        {testimonial.company}
+                      </h3>
                     </div>
-                    
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="rounded-full w-10 h-10 p-0"
-                    >
-                      <a href={testimonial.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+
+                    {/* Quote Section */}
+                    <div className="flex-1 flex items-center justify-center mb-8">
+                      <blockquote className="text-xl leading-relaxed text-muted-foreground max-w-lg">
+                        <span className="text-6xl text-muted-foreground/20 leading-none font-serif">"</span>
+                        <p className="mt-4 text-center">{testimonial.quote}</p>
+                      </blockquote>
+                    </div>
+
+                    {/* Author Section */}
+                    <div className="flex items-center justify-between pt-8 border-t border-border/30">
+                      <div className="flex items-center space-x-4">
+                        <img
+                          src={testimonial.avatar}
+                          alt={testimonial.author}
+                          className="w-14 h-14 rounded-full object-cover shadow-md ring-2 ring-muted"
+                        />
+                        <div>
+                          <p className="font-semibold text-foreground text-lg">{testimonial.author}</p>
+                          <p className="text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </div>
+                      
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        asChild
+                        className="rounded-full w-12 h-12 p-0 hover:scale-110 transition-transform"
+                      >
+                        <a href={testimonial.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                          <Linkedin className="w-5 h-5 text-blue-600" />
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
+
+          {/* Navigation Arrows */}
+          <Button
+            variant="ghost"
+            size="lg"
+            onClick={prevTestimonial}
+            className="absolute left-4 z-50 rounded-full w-14 h-14 bg-background/80 backdrop-blur-sm
+                      shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="lg"
+            onClick={nextTestimonial}
+            className="absolute right-4 z-50 rounded-full w-14 h-14 bg-background/80 backdrop-blur-sm
+                      shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </Button>
         </div>
 
-        {/* Testimonial Indicators */}
-        <div className="flex justify-center space-x-2 mt-12">
+        {/* Pagination Dots */}
+        <div className="flex justify-center space-x-3 mt-16">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
+              className={`h-3 rounded-full transition-all duration-300 hover:scale-110 ${
                 index === currentIndex 
-                  ? "bg-primary w-8" 
-                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  ? "bg-primary w-8 shadow-lg" 
+                  : "bg-muted-foreground/25 w-3 hover:bg-muted-foreground/40"
               }`}
             />
           ))}
