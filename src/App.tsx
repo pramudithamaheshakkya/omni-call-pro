@@ -13,6 +13,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivacyChoices from "./pages/PrivacyChoices";
 import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
+import AboutUs from "./pages/AboutUs";
 import CRM from "./pages/CRM";
 import CampaignManagement from "./pages/CampaignManagement";
 import OmniChannel from "./pages/OmniChannel";
@@ -62,6 +63,7 @@ const App = () => (
             <Route path="/edge" element={<Edge />} />
             <Route path="/cloud" element={<Cloud />} />
             <Route path="/enterprise" element={<Enterprise />} />
+            <Route path="/about-us" element={<AboutUs />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
