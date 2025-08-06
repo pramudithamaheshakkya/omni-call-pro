@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDownIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const ValueProposition = () => {
   const growthPaths = [
@@ -54,7 +54,7 @@ const ValueProposition = () => {
           </p>
           <Button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-3 rounded-full">
             Contact sales
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
           </Button>
         </div>
 
@@ -96,7 +96,7 @@ const ValueProposition = () => {
                     variant="ghost" 
                     className="text-white hover:bg-white/20 p-0 h-auto font-semibold group-hover:translate-x-1 transition-transform"
                   >
-                    <ArrowDown className="mr-2 h-4 w-4" />
+                    <ArrowDownIcon className="mr-2 h-4 w-4" />
                     Explore
                   </Button>
                 </div>
@@ -135,7 +135,7 @@ const ValueProposition = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
-                    <ArrowDown className="mr-2 h-5 w-5 text-purple-500" />
+                    <ArrowDownIcon className="mr-2 h-5 w-5 text-purple-500" />
                     Quick deployment
                   </h4>
                   <p className="text-slate-600 ml-7">
@@ -145,7 +145,7 @@ const ValueProposition = () => {
                 
                 <div>
                   <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
-                    <ArrowDown className="mr-2 h-5 w-5 text-purple-500" />
+                    <ArrowDownIcon className="mr-2 h-5 w-5 text-purple-500" />
                     Smart configurations
                   </h4>
                   <p className="text-slate-600 ml-7">
@@ -155,7 +155,7 @@ const ValueProposition = () => {
                 
                 <div>
                   <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
-                    <ArrowDown className="mr-2 h-5 w-5 text-purple-500" />
+                    <ArrowDownIcon className="mr-2 h-5 w-5 text-purple-500" />
                     Zero training required
                   </h4>
                   <p className="text-slate-600 ml-7">
@@ -188,7 +188,7 @@ const ValueProposition = () => {
             </p>
             <Button className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 text-lg rounded-full">
               Contact sales
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
             </Button>
           </div>
         </div>

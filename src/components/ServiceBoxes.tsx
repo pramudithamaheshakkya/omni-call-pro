@@ -1,4 +1,4 @@
-import { Check, ArrowLeft, Target, Users, TrendingUp, BarChart3, Mail, MessageSquare, Palette, Calendar } from "lucide-react";
+import { CheckIcon, ArrowLeftIcon, PresentationChartBarIcon, UsersIcon, ArrowTrendingUpIcon, ChartBarIcon, EnvelopeIcon, ChatBubbleLeftRightIcon, PaintBrushIcon, CalendarIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -42,10 +42,10 @@ const ServiceBoxes = () => {
           "Customer journey mapping"
         ],
         scenarios: [
-          { icon: Target, title: "Product Launch", description: "Coordinate multi-channel launch campaigns" },
-          { icon: Users, title: "Customer Retention", description: "Re-engage inactive customers with personalized content" },
-          { icon: TrendingUp, title: "Lead Generation", description: "Capture and nurture high-quality leads" },
-          { icon: BarChart3, title: "Performance Analysis", description: "Measure and optimize campaign ROI" }
+          { icon: PresentationChartBarIcon, title: "Product Launch", description: "Coordinate multi-channel launch campaigns" },
+          { icon: UsersIcon, title: "Customer Retention", description: "Re-engage inactive customers with personalized content" },
+          { icon: ArrowTrendingUpIcon, title: "Lead Generation", description: "Capture and nurture high-quality leads" },
+          { icon: ChartBarIcon, title: "Performance Analysis", description: "Measure and optimize campaign ROI" }
         ],
         benefits: [
           { name: "🎯 Increased Conversion", impact: "30% higher conversion rates with AI-powered personalization" },
@@ -83,9 +83,9 @@ const ServiceBoxes = () => {
           "Deliverable management"
         ],
         scenarios: [
-          { icon: Calendar, title: "Sprint Planning", description: "Plan and track development sprints" },
-          { icon: Users, title: "Team Coordination", description: "Align cross-functional teams" },
-          { icon: Target, title: "Milestone Tracking", description: "Monitor project progress" }
+          { icon: CalendarIcon, title: "Sprint Planning", description: "Plan and track development sprints" },
+          { icon: UsersIcon, title: "Team Coordination", description: "Align cross-functional teams" },
+          { icon: PresentationChartBarIcon, title: "Milestone Tracking", description: "Monitor project progress" }
         ],
         benefits: [
           { name: "⏰ On-Time Delivery", impact: "95% of projects delivered on schedule" },
@@ -122,8 +122,8 @@ const ServiceBoxes = () => {
           "Performance analytics"
         ],
         scenarios: [
-          { icon: Target, title: "Lead Qualification", description: "Identify and prioritize hot prospects" },
-          { icon: TrendingUp, title: "Revenue Growth", description: "Optimize sales performance" }
+          { icon: PresentationChartBarIcon, title: "Lead Qualification", description: "Identify and prioritize hot prospects" },
+          { icon: ArrowTrendingUpIcon, title: "Revenue Growth", description: "Optimize sales performance" }
         ],
         benefits: [
           { name: "💰 Revenue Growth", impact: "25% increase in closed deals" },
@@ -159,8 +159,8 @@ const ServiceBoxes = () => {
           "Delivery milestone tracking"
         ],
         scenarios: [
-          { icon: Calendar, title: "Sprint Management", description: "Plan and execute development sprints" },
-          { icon: Target, title: "Quality Assurance", description: "Ensure code quality and reliability" }
+          { icon: CalendarIcon, title: "Sprint Management", description: "Plan and execute development sprints" },
+          { icon: PresentationChartBarIcon, title: "Quality Assurance", description: "Ensure code quality and reliability" }
         ],
         benefits: [
           { name: "🚀 Faster Delivery", impact: "40% faster sprint completion" },
@@ -196,8 +196,8 @@ const ServiceBoxes = () => {
           "Training progress monitoring"
         ],
         scenarios: [
-          { icon: Users, title: "Recruitment", description: "Find and hire top talent efficiently" },
-          { icon: TrendingUp, title: "Employee Development", description: "Foster growth and retention" }
+          { icon: UsersIcon, title: "Recruitment", description: "Find and hire top talent efficiently" },
+          { icon: ArrowTrendingUpIcon, title: "Employee Development", description: "Foster growth and retention" }
         ],
         benefits: [
           { name: "👥 Better Hiring", impact: "50% improvement in candidate quality" },
@@ -234,8 +234,8 @@ const ServiceBoxes = () => {
           "User satisfaction monitoring"
         ],
         scenarios: [
-          { icon: MessageSquare, title: "Ticket Resolution", description: "Resolve issues faster with AI assistance" },
-          { icon: BarChart3, title: "Performance Analytics", description: "Track and improve support metrics" }
+          { icon: ChatBubbleLeftRightIcon, title: "Ticket Resolution", description: "Resolve issues faster with AI assistance" },
+          { icon: ChartBarIcon, title: "Performance Analytics", description: "Track and improve support metrics" }
         ],
         benefits: [
           { name: "⚡ Faster Resolution", impact: "10x faster average resolution time" },
@@ -271,8 +271,8 @@ const ServiceBoxes = () => {
           "Operational performance metrics"
         ],
         scenarios: [
-          { icon: BarChart3, title: "Financial Analysis", description: "Monitor and optimize financial performance" },
-          { icon: Target, title: "Process Optimization", description: "Improve operational efficiency" }
+          { icon: ChartBarIcon, title: "Financial Analysis", description: "Monitor and optimize financial performance" },
+          { icon: PresentationChartBarIcon, title: "Process Optimization", description: "Improve operational efficiency" }
         ],
         benefits: [
           { name: "💰 Cost Savings", impact: "20% reduction in operational costs" },
@@ -308,8 +308,8 @@ const ServiceBoxes = () => {
           "Compliance documentation"
         ],
         scenarios: [
-          { icon: Calendar, title: "Project Planning", description: "Plan and schedule construction phases" },
-          { icon: Users, title: "Team Coordination", description: "Coordinate multiple construction teams" }
+          { icon: CalendarIcon, title: "Project Planning", description: "Plan and schedule construction phases" },
+          { icon: UsersIcon, title: "Team Coordination", description: "Coordinate multiple construction teams" }
         ],
         benefits: [
           { name: "⏰ On-Time Completion", impact: "90% of projects completed on schedule" },
@@ -340,7 +340,7 @@ const ServiceBoxes = () => {
               onClick={handleBack}
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeftIcon className="w-4 h-4" />
               Back to Use Cases
             </Button>
           </div>
@@ -387,7 +387,7 @@ const ServiceBoxes = () => {
                     <div key={index} className="space-y-3">
                       <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
                         <div className="text-center p-4">
-                          <BarChart3 className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
+                          <ChartBarIcon className="w-12 h-12 mx-auto mb-2 text-muted-foreground" />
                           <p className="text-sm font-medium text-muted-foreground">
                             {screenshot.title} Preview
                           </p>
@@ -411,7 +411,7 @@ const ServiceBoxes = () => {
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg bg-muted/50">
                     <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
                          style={{ backgroundColor: box.color }}>
-                      <Check className="w-4 h-4 text-white" strokeWidth={2} />
+                      <CheckIcon className="w-4 h-4 text-white" strokeWidth={2} />
                     </div>
                     <span className="text-foreground">{feature}</span>
                   </div>
@@ -514,7 +514,7 @@ const ServiceBoxes = () => {
                 {box.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center space-x-3">
                     <div className="w-6 h-6 rounded-full bg-white bg-opacity-20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-4 h-4 text-white" strokeWidth={2} />
+                      <CheckIcon className="w-4 h-4 text-white" strokeWidth={2} />
                     </div>
                     <span className="text-base font-normal">{feature}</span>
                   </div>
