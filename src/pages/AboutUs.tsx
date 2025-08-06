@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeftIcon, ChevronRightIcon, CalendarIcon, UsersIcon, PresentationChartBarIcon, LightBulbIcon, TrophyIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+import { ChevronLeft, ChevronRight, Calendar, Users, Target, Lightbulb, Award, Globe } from "lucide-react";
 
 const AboutUs = () => {
   const [currentStory, setCurrentStory] = useState(0);
@@ -13,37 +13,37 @@ const AboutUs = () => {
       year: "2019",
       title: "The Beginning",
       description: "Started as a small team with a big vision to transform how businesses manage their workflows and customer relationships.",
-      icon: <LightBulbIcon className="w-8 h-8" />
+      icon: <Lightbulb className="w-8 h-8" />
     },
     {
       year: "2020",
       title: "First Major Client",
       description: "Successfully onboarded our first enterprise client, proving our platform's scalability and reliability.",
-      icon: <UsersIcon className="w-8 h-8" />
+      icon: <Users className="w-8 h-8" />
     },
     {
       year: "2021",
       title: "Product Launch",
       description: "Launched our comprehensive CRM and workflow automation platform, revolutionizing business operations.",
-      icon: <PresentationChartBarIcon className="w-8 h-8" />
+      icon: <Target className="w-8 h-8" />
     },
     {
       year: "2022",
       title: "Global Expansion",
       description: "Expanded operations internationally, serving clients across multiple continents and time zones.",
-      icon: <GlobeAltIcon className="w-8 h-8" />
+      icon: <Globe className="w-8 h-8" />
     },
     {
       year: "2023",
       title: "Industry Recognition",
       description: "Received multiple awards for innovation in business automation and customer experience excellence.",
-      icon: <TrophyIcon className="w-8 h-8" />
+      icon: <Award className="w-8 h-8" />
     },
     {
       year: "2024",
       title: "Future Forward",
       description: "Continuously innovating with AI-powered features and expanding our platform capabilities.",
-      icon: <CalendarIcon className="w-8 h-8" />
+      icon: <Calendar className="w-8 h-8" />
     }
   ];
 
@@ -82,7 +82,7 @@ const AboutUs = () => {
                 <div className="w-full h-full bg-primary/10 rounded-2xl flex items-center justify-center">
                   <div className="text-center space-y-4">
                     <div className="w-20 h-20 bg-primary rounded-full mx-auto flex items-center justify-center">
-                      <UsersIcon className="w-10 h-10 text-primary-foreground" />
+                      <Users className="w-10 h-10 text-primary-foreground" />
                     </div>
                     <h3 className="text-2xl font-semibold">People First</h3>
                     <p className="text-muted-foreground">Building solutions that put people at the center</p>
@@ -119,7 +119,7 @@ const AboutUs = () => {
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <PresentationChartBarIcon className="w-6 h-6 text-primary" />
+                      <Target className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-semibold">Mission Driven</h3>
                     <p className="text-sm text-muted-foreground">
@@ -132,7 +132,7 @@ const AboutUs = () => {
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                      <LightBulbIcon className="w-6 h-6 text-secondary" />
+                      <Lightbulb className="w-6 h-6 text-secondary" />
                     </div>
                     <h3 className="font-semibold">Innovation First</h3>
                     <p className="text-sm text-muted-foreground">
@@ -145,7 +145,7 @@ const AboutUs = () => {
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <UsersIcon className="w-6 h-6 text-accent" />
+                      <Users className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="font-semibold">Community</h3>
                     <p className="text-sm text-muted-foreground">
@@ -158,7 +158,7 @@ const AboutUs = () => {
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <GlobeAltIcon className="w-6 h-6 text-primary" />
+                      <Globe className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="font-semibold">Global Impact</h3>
                     <p className="text-sm text-muted-foreground">
@@ -192,7 +192,7 @@ const AboutUs = () => {
                     onClick={prevStory}
                     className="rounded-full"
                   >
-                    <ChevronLeftIcon className="w-4 h-4" />
+                    <ChevronLeft className="w-4 h-4" />
                   </Button>
                   
                   <div className="text-center flex-1 mx-8">
@@ -218,7 +218,7 @@ const AboutUs = () => {
                     onClick={nextStory}
                     className="rounded-full"
                   >
-                    <ChevronRightIcon className="w-4 h-4" />
+                    <ChevronRight className="w-4 h-4" />
                   </Button>
                 </div>
 
@@ -256,7 +256,7 @@ const AboutUs = () => {
             <Card className="text-center shadow-soft hover:shadow-card transition-shadow">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-primary/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <UsersIcon className="w-8 h-8 text-primary" />
+                  <Users className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Collaboration</h3>
                 <p className="text-muted-foreground">
@@ -268,7 +268,7 @@ const AboutUs = () => {
             <Card className="text-center shadow-soft hover:shadow-card transition-shadow">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-secondary/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <LightBulbIcon className="w-8 h-8 text-secondary" />
+                  <Lightbulb className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Innovation</h3>
                 <p className="text-muted-foreground">
@@ -280,7 +280,7 @@ const AboutUs = () => {
             <Card className="text-center shadow-soft hover:shadow-card transition-shadow">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-accent/10 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <PresentationChartBarIcon className="w-8 h-8 text-accent" />
+                  <Target className="w-8 h-8 text-accent" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Excellence</h3>
                 <p className="text-muted-foreground">

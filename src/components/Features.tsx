@@ -2,69 +2,69 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { 
-  PhoneIcon, 
-  PhoneArrowDownLeftIcon, 
-  UsersIcon, 
-  ShieldCheckIcon, 
-  BoltIcon, 
-  ComputerDesktopIcon, 
-  SpeakerWaveIcon,
-  CpuChipIcon
-} from "@heroicons/react/24/outline";
+  Phone, 
+  PhoneCall, 
+  Users, 
+  Shield, 
+  Zap, 
+  Monitor, 
+  Headphones,
+  Brain
+} from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: <PhoneIcon className="h-8 w-8" />,
+      icon: <Phone className="h-8 w-8" />,
       title: "Crystal-Clear Voice Quality",
       description: "Experience flawless voice communication every time. Deliver reliable, high-quality calls that keep conversations smooth and professional.",
       gradient: "from-purple-500 to-purple-600",
       badge: "Premium Audio"
     },
     {
-      icon: <PhoneArrowDownLeftIcon className="h-8 w-8" />,
+      icon: <PhoneCall className="h-8 w-8" />,
       title: "Effortless Call Transfers",
       description: "Never lose a customer due to a missed handoff. Transfer calls instantly—whether attended or blind transfers.",
       gradient: "from-blue-500 to-indigo-600",
       badge: "Seamless"
     },
     {
-      icon: <UsersIcon className="h-8 w-8" />,
+      icon: <Users className="h-8 w-8" />,
       title: "Instant Conference Calls",
       description: "Collaborate on the fly. Bring multiple people into the conversation with just a click—perfect for team problem-solving.",
       gradient: "from-indigo-500 to-purple-600",
       badge: "Team Power"
     },
     {
-      icon: <ShieldCheckIcon className="h-8 w-8" />,
+      icon: <Shield className="h-8 w-8" />,
       title: "Enterprise Security",
       description: "Protect your business communications with enterprise-grade security. 2FA keeps unauthorized users out and data safe.",
       gradient: "from-cyan-400 to-blue-500",
       badge: "2FA Protected"
     },
     {
-      icon: <ComputerDesktopIcon className="h-8 w-8" />,
+      icon: <Monitor className="h-8 w-8" />,
       title: "Revolutionary Dock Mode",
       description: "Anchor the softphone interface to any edge of your desktop. Stay connected, stay productive.",
       gradient: "from-red-400 to-pink-500",
       badge: "Unique Feature"
     },
     {
-      icon: <BoltIcon className="h-8 w-8" />,
+      icon: <Zap className="h-8 w-8" />,
       title: "Lightning-Fast Performance",
       description: "Optimized desktop softphone runs smoothly on standard PCs, ensuring crisp calls without draining resources.",
       gradient: "from-green-400 to-emerald-500",
       badge: "Optimized"
     },
     {
-      icon: <SpeakerWaveIcon className="h-8 w-8" />,
+      icon: <Headphones className="h-8 w-8" />,
       title: "Advanced Call Handling",
       description: "Manage multiple calls with ease—hold, resume, park, or send DTMF tones seamlessly. Empower your agents with professional tools.",
       gradient: "from-orange-400 to-red-500",
       badge: "Full Control"
     },
     {
-      icon: <CpuChipIcon className="h-8 w-8" />,
+      icon: <Brain className="h-8 w-8" />,
       title: "AI-Powered Features",
       description: "Stay ahead with AI-powered call summaries, real-time transcription, and smart assistant prompts coming soon.",
       gradient: "from-violet-500 to-purple-600",

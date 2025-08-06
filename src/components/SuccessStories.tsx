@@ -1,13 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChatBubbleLeftIcon, ArrowTrendingUpIcon, ClockIcon, UsersIcon } from "@heroicons/react/24/outline";
+import { Quote, TrendingUp, Clock, Users } from "lucide-react";
 
 const SuccessStories = () => {
   const stories = [
     {
       company: "Insurance Call Center — Sri Lanka",
       agents: "60+ Agents",
-      icon: <UsersIcon className="w-6 h-6 text-brand-blue" />,
+      icon: <Users className="w-6 h-6 text-brand-blue" />,
       challenge: "Slow, manual call transfers and outdated desk phones led to frustrating delays and poor call quality, impacting customer satisfaction.",
       solution: "Implemented Uniconnect Edge's sleek Windows desktop app with seamless headset integration.",
       result: "Instant call transfers, clear audio, and a remarkable boost in agent productivity enabling faster resolutions and happier customers.",
@@ -16,7 +16,7 @@ const SuccessStories = () => {
     {
       company: "Leading BPO Client",
       agents: "150+ Agents",
-      icon: <ArrowTrendingUpIcon className="w-6 h-6 text-brand-green" />,
+      icon: <TrendingUp className="w-6 h-6 text-brand-green" />,
       challenge: "Lengthy and complicated training on legacy VoIP phones slowed new agent ramp-up and limited call capacity.",
       solution: "Deployed Uniconnect Edge with its intuitive, user-friendly interface that new hires mastered in just 30 minutes.",
       result: "Daily call volume surged by 22% without adding staff—significantly improving operational efficiency and customer reach.",
@@ -25,7 +25,7 @@ const SuccessStories = () => {
     {
       company: "Healthcare Hotline Support",
       agents: "Multi-department",
-      icon: <ClockIcon className="w-6 h-6 text-brand-orange" />,
+      icon: <Clock className="w-6 h-6 text-brand-orange" />,
       challenge: "Complex calls involving multiple medical staff were difficult to manage, with cumbersome conference and transfer processes increasing call times.",
       solution: "Leveraged Uniconnect Edge's effortless conference calling and smart call management features.",
       result: "Streamlined team communication and collaboration cut average call handling time by 35%, freeing healthcare professionals to focus more on patient care.",
@@ -72,7 +72,7 @@ const SuccessStories = () => {
                       </Badge>
                     </div>
                   </div>
-                  <ChatBubbleLeftIcon className="w-8 h-8 text-muted-foreground/30" />
+                  <Quote className="w-8 h-8 text-muted-foreground/30" />
                 </div>
                 
                 <div className="space-y-4">

@@ -2,37 +2,37 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChatBubbleLeftIcon, EnvelopeIcon, PhoneIcon, VideoCameraIcon, DevicePhoneMobileIcon, GlobeAltIcon } from "@heroicons/react/24/outline";
+import { MessageCircle, Mail, Phone, Video, Smartphone, Globe } from "lucide-react";
 
 const OmniChannel = () => {
   const channels = [
     {
-      icon: <ChatBubbleLeftIcon className="h-8 w-8" />,
+      icon: <MessageCircle className="h-8 w-8" />,
       title: "Live Chat",
       description: "Real-time website chat support"
     },
     {
-      icon: <EnvelopeIcon className="h-8 w-8" />,
+      icon: <Mail className="h-8 w-8" />,
       title: "Email",
       description: "Professional email communication"
     },
     {
-      icon: <PhoneIcon className="h-8 w-8" />,
+      icon: <Phone className="h-8 w-8" />,
       title: "Voice Calls",
       description: "High-quality voice communication"
     },
     {
-      icon: <VideoCameraIcon className="h-8 w-8" />,
+      icon: <Video className="h-8 w-8" />,
       title: "Video Calls",
       description: "Face-to-face video meetings"
     },
     {
-      icon: <DevicePhoneMobileIcon className="h-8 w-8" />,
+      icon: <Smartphone className="h-8 w-8" />,
       title: "SMS/WhatsApp",
       description: "Mobile messaging integration"
     },
     {
-      icon: <GlobeAltIcon className="h-8 w-8" />,
+      icon: <Globe className="h-8 w-8" />,
       title: "Social Media",
       description: "Connect across social platforms"
     }
