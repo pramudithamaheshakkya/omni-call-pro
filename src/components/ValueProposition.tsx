@@ -156,7 +156,7 @@ const ValueProposition = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-slate-900 mb-2 flex items-center">
                     <ArrowDownIcon className="mr-2 h-5 w-5 text-purple-500" />
-                    Zero training required
+                     Zero training required
                   </h4>
                   <p className="text-slate-600 ml-7">
                     Intuitive interface that your team can master in under 30 minutes
