@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 import { MagnifyingGlassIcon, ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 const Blog = () => {
   const featuredPosts = [
     {
       id: 1,
+      slug: "connect-ai-agents-apps",
       title: "Connect AI agents and apps to Uniconnect",
       description: "Seamlessly connect AI agents and apps to your account. Once connected, they can manage boards, assign tasks, generate insights, and keep Uniconnect as your source of truth.",
       image: "/lovable-uploads/6d5806f0-77e9-4436-a728-4ebc5583a983.png",
@@ -19,6 +21,7 @@ const Blog = () => {
     },
     {
       id: 2,
+      slug: "ai-blocks-open",
       title: "AI Blocks are now open to everyone",
       description: "Easily add AI to your workflows with ready-made AI actions and watch smarter work get done, faster.",
       image: "/lovable-uploads/351de0d9-a30a-4d8c-bb5e-855e4586b3aa.png",
@@ -31,6 +34,7 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 3,
+      slug: "outreach-sequences",
       title: "Build an outreach machine with Sequences",
       description: "Transform your customer outreach with automated sequences that nurture leads and drive conversions.",
       category: "New release",
@@ -39,6 +43,7 @@ const Blog = () => {
     },
     {
       id: 4,
+      slug: "workflow-automation-2",
       title: "Workflow Automation 2.0 is here",
       description: "Enhanced automation capabilities with advanced triggers, conditions, and actions for seamless business processes.",
       category: "Feature update",
@@ -47,6 +52,7 @@ const Blog = () => {
     },
     {
       id: 5,
+      slug: "enterprise-security",
       title: "Enterprise Security Features",
       description: "Advanced security controls and compliance features designed for enterprise-grade protection.",
       category: "Security",
@@ -55,6 +61,7 @@ const Blog = () => {
     },
     {
       id: 6,
+      slug: "crm-integration-improvements",
       title: "CRM Integration Improvements",
       description: "Better sync capabilities and enhanced data mapping for seamless CRM integrations.",
       category: "Improvement",
@@ -63,6 +70,7 @@ const Blog = () => {
     },
     {
       id: 7,
+      slug: "mobile-performance-updates",
       title: "Mobile App Performance Updates",
       description: "Faster loading times and improved user experience across all mobile platforms.",
       category: "Performance",
@@ -71,6 +79,7 @@ const Blog = () => {
     },
     {
       id: 8,
+      slug: "advanced-analytics-dashboard",
       title: "Advanced Analytics Dashboard",
       description: "New analytics capabilities with real-time insights and customizable reporting options.",
       category: "Analytics",
@@ -108,29 +117,31 @@ const Blog = () => {
             
             <div className="grid md:grid-cols-2 gap-8">
               {featuredPosts.map((post) => (
-                <Card key={post.id} className="overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300">
-                  <div className="aspect-video relative overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <Badge variant="secondary" className="mb-3">
-                      {post.category}
-                    </Badge>
-                    <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                      {post.title}
-                    </h2>
-                    <p className="text-muted-foreground mb-4">
-                      {post.description}
-                    </p>
-                    <Button variant="link" className="p-0 h-auto text-primary hover:text-primary/80">
-                      Learn more →
-                    </Button>
-                  </CardContent>
-                </Card>
+                <Link key={post.id} to={`/blog/${post.slug}`}>
+                  <Card className="overflow-hidden group cursor-pointer hover:shadow-lg transition-all duration-300 hover-scale">
+                    <div className="aspect-video relative overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <Badge variant="secondary" className="mb-3">
+                        {post.category}
+                      </Badge>
+                      <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="text-muted-foreground mb-4">
+                        {post.description}
+                      </p>
+                      <Button variant="link" className="p-0 h-auto text-primary hover:text-primary/80">
+                        Learn more →
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -202,32 +213,34 @@ const Blog = () => {
                   
                   <div className="space-y-8 ml-8">
                     {blogPosts.slice(0, 3).map((post) => (
-                      <div key={post.id} className="flex gap-6 group cursor-pointer">
-                        <div className="flex-shrink-0">
-                          <Badge variant="outline" className="mb-2">
-                            New release
-                          </Badge>
-                          <p className="text-sm text-muted-foreground">{post.date}</p>
+                      <Link key={post.id} to={`/blog/${post.slug}`}>
+                        <div className="flex gap-6 group cursor-pointer hover-scale transition-all duration-300">
+                          <div className="flex-shrink-0">
+                            <Badge variant="outline" className="mb-2">
+                              New release
+                            </Badge>
+                            <p className="text-sm text-muted-foreground">{post.date}</p>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                              {post.title}
+                            </h4>
+                            <p className="text-muted-foreground mb-4">
+                              {post.description}
+                            </p>
+                            <Button variant="link" className="p-0 h-auto text-primary hover:text-primary/80">
+                              Read more →
+                            </Button>
+                          </div>
+                          <div className="flex-shrink-0 w-32 h-20">
+                            <img 
+                              src={post.image} 
+                              alt={post.title}
+                              className="w-full h-full object-cover rounded-lg"
+                            />
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h4 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                            {post.title}
-                          </h4>
-                          <p className="text-muted-foreground mb-4">
-                            {post.description}
-                          </p>
-                          <Button variant="link" className="p-0 h-auto text-primary hover:text-primary/80">
-                            Read more →
-                          </Button>
-                        </div>
-                        <div className="flex-shrink-0 w-32 h-20">
-                          <img 
-                            src={post.image} 
-                            alt={post.title}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -240,32 +253,34 @@ const Blog = () => {
                   
                   <div className="space-y-8 ml-8">
                     {blogPosts.slice(3).map((post) => (
-                      <div key={post.id} className="flex gap-6 group cursor-pointer">
-                        <div className="flex-shrink-0">
-                          <Badge variant="outline" className="mb-2">
-                            {post.category}
-                          </Badge>
-                          <p className="text-sm text-muted-foreground">{post.date}</p>
+                      <Link key={post.id} to={`/blog/${post.slug}`}>
+                        <div className="flex gap-6 group cursor-pointer hover-scale transition-all duration-300">
+                          <div className="flex-shrink-0">
+                            <Badge variant="outline" className="mb-2">
+                              {post.category}
+                            </Badge>
+                            <p className="text-sm text-muted-foreground">{post.date}</p>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                              {post.title}
+                            </h4>
+                            <p className="text-muted-foreground mb-4">
+                              {post.description}
+                            </p>
+                            <Button variant="link" className="p-0 h-auto text-primary hover:text-primary/80">
+                              Read more →
+                            </Button>
+                          </div>
+                          <div className="flex-shrink-0 w-32 h-20">
+                            <img 
+                              src={post.image} 
+                              alt={post.title}
+                              className="w-full h-full object-cover rounded-lg"
+                            />
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h4 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                            {post.title}
-                          </h4>
-                          <p className="text-muted-foreground mb-4">
-                            {post.description}
-                          </p>
-                          <Button variant="link" className="p-0 h-auto text-primary hover:text-primary/80">
-                            Read more →
-                          </Button>
-                        </div>
-                        <div className="flex-shrink-0 w-32 h-20">
-                          <img 
-                            src={post.image} 
-                            alt={post.title}
-                            className="w-full h-full object-cover rounded-lg"
-                          />
-                        </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 </div>

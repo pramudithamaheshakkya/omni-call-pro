@@ -28,6 +28,7 @@ import Edge from "./pages/Edge";
 import Cloud from "./pages/Cloud";
 import Enterprise from "./pages/Enterprise";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/blog/BlogPost";
 import MarketingBrand from "./pages/MarketingBrand";
 import ProjectManagement from "./pages/ProjectManagement";
 import SalesRevenue from "./pages/SalesRevenue";
@@ -74,6 +75,7 @@ const App = () => (
             <Route path="/enterprise" element={<Enterprise />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             
             {/* Use Case Pages */}
             <Route path="/use-case/marketing-brand" element={<MarketingBrand />} />
