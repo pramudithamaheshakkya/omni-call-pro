@@ -18,7 +18,7 @@ const UseCase = () => {
 
   const useCases = [
     {
-      id: "marketing",
+      id: "marketing-brand",
       title: "Marketing",
       subtitle: "& Brand",
       description: "Launch impactful campaigns",
@@ -60,7 +60,7 @@ const UseCase = () => {
       ]
     },
     {
-      id: "sales",
+      id: "sales-revenue",
       title: "Sales",
       subtitle: "& Revenue",
       description: "Focus on the most promising deals",
@@ -81,7 +81,7 @@ const UseCase = () => {
       ]
     },
     {
-      id: "developers",
+      id: "developers-software",
       title: "Developers",
       subtitle: "& Software",
       description: "Amplify sprint velocity",
@@ -102,7 +102,7 @@ const UseCase = () => {
       ]
     },
     {
-      id: "hr",
+      id: "hr-recruiting",
       title: "HR",
       subtitle: "& Recruiting",
       description: "Secure top talent effortlessly",
@@ -123,7 +123,7 @@ const UseCase = () => {
       ]
     },
     {
-      id: "it",
+      id: "it-support",
       title: "IT",
       subtitle: "& Support",
       description: "Resolve tickets 10 times faster",
@@ -144,7 +144,7 @@ const UseCase = () => {
       ]
     },
     {
-      id: "operations",
+      id: "operations-finance",
       title: "Operations",
       subtitle: "& Finance",
       description: "Scale operations seamlessly",
@@ -165,7 +165,7 @@ const UseCase = () => {
       ]
     },
     {
-      id: "construction",
+      id: "construction-building",
       title: "Construction",
       subtitle: "& Building",
       description: "Manage projects from blueprint to completion",
@@ -240,7 +240,7 @@ const UseCase = () => {
               </CollapsibleTrigger>
               
               <CollapsibleContent className="mt-4">
-                {useCase.id === 'marketing' ? (
+                {useCase.id === 'marketing-brand' ? (
                   <div className="bg-white rounded-lg p-8 shadow-sm text-gray-900 max-w-6xl">
                     <div className="space-y-8">
                       {/* Header */}
