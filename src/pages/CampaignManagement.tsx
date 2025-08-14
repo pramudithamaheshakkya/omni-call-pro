@@ -2,37 +2,37 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Megaphone, Calendar, Target, BarChart3, Mail, Users } from "lucide-react";
+import { SpeakerWaveIcon, CalendarIcon, PresentationChartBarIcon, EnvelopeIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 const CampaignManagement = () => {
   const features = [
     {
-      icon: <Megaphone className="h-8 w-8" />,
+      icon: <SpeakerWaveIcon className="h-8 w-8" />,
       title: "Campaign Builder",
       description: "Create multi-channel campaigns with drag-and-drop simplicity"
     },
     {
-      icon: <Calendar className="h-8 w-8" />,
+      icon: <CalendarIcon className="h-8 w-8" />,
       title: "Scheduling",
       description: "Plan and schedule campaigns across multiple time zones"
     },
     {
-      icon: <Target className="h-8 w-8" />,
+      icon: <PresentationChartBarIcon className="h-8 w-8" />,
       title: "Audience Targeting",
       description: "Precise targeting based on demographics and behavior"
     },
     {
-      icon: <BarChart3 className="h-8 w-8" />,
+      icon: <PresentationChartBarIcon className="h-8 w-8" />,
       title: "Performance Tracking",
       description: "Real-time analytics and ROI measurement"
     },
     {
-      icon: <Mail className="h-8 w-8" />,
+      icon: <EnvelopeIcon className="h-8 w-8" />,
       title: "Email Automation",
       description: "Automated email sequences and drip campaigns"
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      icon: <UsersIcon className="h-8 w-8" />,
       title: "Segmentation",
       description: "Advanced customer segmentation for personalized campaigns"
     }
