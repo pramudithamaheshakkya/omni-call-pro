@@ -3,7 +3,21 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, Database, Target, TrendingUp, Shield, Clock, Workflow, Brain, BarChart3, Globe, Lock, Check, Briefcase } from "lucide-react";
+import { 
+  UserGroupIcon as Users, 
+  CircleStackIcon as Database, 
+  CursorArrowRaysIcon as Target, 
+  ChartBarIcon as TrendingUp, 
+  ShieldCheckIcon as Shield, 
+  ClockIcon as Clock, 
+  Cog6ToothIcon as Workflow, 
+  LightBulbIcon as Brain, 
+  ChartBarIcon as BarChart3, 
+  GlobeAltIcon as Globe, 
+  LockClosedIcon as Lock, 
+  CheckIcon as Check, 
+  BriefcaseIcon as Briefcase 
+} from "@heroicons/react/24/outline";
 
 const CRM = () => {
   const keyFeatures = [

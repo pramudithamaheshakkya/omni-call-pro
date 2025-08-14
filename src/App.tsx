@@ -28,6 +28,14 @@ import Edge from "./pages/Edge";
 import Cloud from "./pages/Cloud";
 import Enterprise from "./pages/Enterprise";
 import Blog from "./pages/Blog";
+import MarketingBrand from "./pages/MarketingBrand";
+import ProjectManagement from "./pages/ProjectManagement";
+import SalesRevenue from "./pages/SalesRevenue";
+import DevelopersSoftware from "./pages/DevelopersSoftware";
+import HRRecruiting from "./pages/HRRecruiting";
+import ITSupport from "./pages/ITSupport";
+import OperationsFinance from "./pages/OperationsFinance";
+import ConstructionBuilding from "./pages/ConstructionBuilding";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +74,16 @@ const App = () => (
             <Route path="/enterprise" element={<Enterprise />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/blog" element={<Blog />} />
+            
+            {/* Use Case Pages */}
+            <Route path="/use-case/marketing-brand" element={<MarketingBrand />} />
+            <Route path="/use-case/project-management" element={<ProjectManagement />} />
+            <Route path="/use-case/sales-revenue" element={<SalesRevenue />} />
+            <Route path="/use-case/developers-software" element={<DevelopersSoftware />} />
+            <Route path="/use-case/hr-recruiting" element={<HRRecruiting />} />
+            <Route path="/use-case/it-support" element={<ITSupport />} />
+            <Route path="/use-case/operations-finance" element={<OperationsFinance />} />
+            <Route path="/use-case/construction-building" element={<ConstructionBuilding />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
