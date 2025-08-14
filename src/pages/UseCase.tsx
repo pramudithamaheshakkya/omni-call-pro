@@ -196,7 +196,7 @@ const UseCase = () => {
             Use Cases
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover how our CRM solution adapts to different industries and business needs
+            Discover how Uniconnect adapts to different industries and business needs
           </p>
         </div>
 

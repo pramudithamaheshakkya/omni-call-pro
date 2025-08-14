@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">U</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Uniconnect Edge</span>
+              <span className="text-xl font-bold text-foreground">Uniconnect</span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
               Transform your desktop into a high-performance communication hub with our next-generation 
@@ -59,7 +59,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-muted-foreground text-sm">
-              © 2024 Uniconnect Edge. All rights reserved.
+              © 2024 Uniconnect. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 md:mt-0">
               <a href="/security" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Security</a>

@@ -23,7 +23,7 @@ const Hero = () => {
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             One intelligent platform for CRM, Auto Dialing, and Smart Call Handling—built to 
-            supercharge every customer interaction with AI-powered insights and seamless desktop integration.
+            supercharge every customer interaction with AI-powered insights and seamless integration.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">

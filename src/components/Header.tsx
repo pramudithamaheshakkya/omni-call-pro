@@ -24,7 +24,7 @@ const Header = () => {
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/351de0d9-a30a-4d8c-bb5e-855e4586b3aa.png" 
-                alt="Uniconnect Logo" 
+                alt="Uniconnect Logo"
                 className="h-10 w-auto"
               />
             </div>
