@@ -2,37 +2,37 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BarChart3, PieChart, TrendingUp, Calendar, Download, Eye } from "lucide-react";
+import { PresentationChartBarIcon, ChartPieIcon, ArrowTrendingUpIcon, CalendarIcon, ArrowDownTrayIcon, EyeIcon } from "@heroicons/react/24/outline";
 
 const Reports = () => {
   const features = [
     {
-      icon: <BarChart3 className="h-8 w-8" />,
+      icon: <PresentationChartBarIcon className="h-8 w-8" />,
       title: "Interactive Dashboards",
       description: "Real-time visual dashboards with customizable widgets"
     },
     {
-      icon: <PieChart className="h-8 w-8" />,
+      icon: <ChartPieIcon className="h-8 w-8" />,
       title: "Data Visualization",
       description: "Beautiful charts and graphs for better data understanding"
     },
     {
-      icon: <TrendingUp className="h-8 w-8" />,
+      icon: <ArrowTrendingUpIcon className="h-8 w-8" />,
       title: "Trend Analysis",
       description: "Identify patterns and trends in your business data"
     },
     {
-      icon: <Calendar className="h-8 w-8" />,
+      icon: <CalendarIcon className="h-8 w-8" />,
       title: "Scheduled Reports",
       description: "Automated report generation and delivery"
     },
     {
-      icon: <Download className="h-8 w-8" />,
+      icon: <ArrowDownTrayIcon className="h-8 w-8" />,
       title: "Export Options",
       description: "Export reports in PDF, Excel, and other formats"
     },
     {
-      icon: <Eye className="h-8 w-8" />,
+      icon: <EyeIcon className="h-8 w-8" />,
       title: "Custom Views",
       description: "Create personalized report views for different users"
     }

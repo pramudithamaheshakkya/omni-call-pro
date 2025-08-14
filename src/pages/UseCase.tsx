@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const UseCase = () => {
@@ -208,7 +209,8 @@ const UseCase = () => {
               className="h-fit"
             >
               <CollapsibleTrigger asChild>
-                <div className={`${useCase.color} rounded-lg p-6 text-white cursor-pointer transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl aspect-square flex flex-col justify-between`}>
+                <Link to={`/use-case/${useCase.id}`}>
+                  <div className={`${useCase.color} rounded-lg p-6 text-white cursor-pointer transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl aspect-square flex flex-col justify-between`}>
                   <div className="space-y-3">
                     <div>
                       <h3 className="text-xl font-bold">{useCase.title}</h3>
@@ -227,13 +229,14 @@ const UseCase = () => {
                     <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
                       <div className="w-3 h-3 bg-white rounded-sm"></div>
                     </div>
-                    <ChevronDown 
+                    <ChevronDownIcon 
                       className={`h-4 w-4 transition-transform duration-200 ${
                         openItems.includes(useCase.id) ? 'rotate-180' : ''
                       }`} 
                     />
                   </div>
-                </div>
+                  </div>
+                </Link>
               </CollapsibleTrigger>
               
               <CollapsibleContent className="mt-4">
