@@ -27,7 +27,6 @@ import AccessControl from "./pages/AccessControl";
 import Edge from "./pages/Edge";
 import Cloud from "./pages/Cloud";
 import Enterprise from "./pages/Enterprise";
-import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -64,7 +63,6 @@ const App = () => (
             <Route path="/edge" element={<Edge />} />
             <Route path="/cloud" element={<Cloud />} />
             <Route path="/enterprise" element={<Enterprise />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/about-us" element={<AboutUs />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -2,37 +2,37 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Workflow, Zap, Settings, Timer, ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowsRightLeftIcon, BoltIcon, CogIcon, ClockIcon, ArrowRightIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 
 const WorkflowAutomation = () => {
   const features = [
     {
-      icon: <Workflow className="h-8 w-8" />,
+      icon: <ArrowsRightLeftIcon className="h-8 w-8" />,
       title: "Visual Workflow Builder",
       description: "Drag-and-drop interface for creating complex workflows"
     },
     {
-      icon: <Zap className="h-8 w-8" />,
+      icon: <BoltIcon className="h-8 w-8" />,
       title: "Trigger Events",
       description: "Automatic triggers based on user actions and conditions"
     },
     {
-      icon: <Settings className="h-8 w-8" />,
+      icon: <CogIcon className="h-8 w-8" />,
       title: "Custom Rules",
       description: "Define custom business rules and logic"
     },
     {
-      icon: <Timer className="h-8 w-8" />,
+      icon: <ClockIcon className="h-8 w-8" />,
       title: "Scheduled Tasks",
       description: "Time-based automation for recurring processes"
     },
     {
-      icon: <ArrowRight className="h-8 w-8" />,
+      icon: <ArrowRightIcon className="h-8 w-8" />,
       title: "Multi-step Processes",
       description: "Chain multiple actions into complex workflows"
     },
     {
-      icon: <CheckCircle className="h-8 w-8" />,
+      icon: <CheckCircleIcon className="h-8 w-8" />,
       title: "Approval Workflows",
       description: "Automated approval chains with notifications"
     }

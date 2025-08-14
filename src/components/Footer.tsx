@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/outline";
 
 const Footer = () => {
   return (
@@ -41,15 +41,15 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-brand-purple" />
+                <EnvelopeIcon className="w-5 h-5 text-brand-purple" />
                 <span className="text-muted-foreground">sales@uniconnect.ai</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-brand-purple" />
+                <PhoneIcon className="w-5 h-5 text-brand-purple" />
                 <span className="text-muted-foreground">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-brand-purple" />
+                <MapPinIcon className="w-5 h-5 text-brand-purple" />
                 <span className="text-muted-foreground">Global Headquarters</span>
               </div>
             </div>
