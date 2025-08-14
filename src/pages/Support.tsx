@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, MessageCircle, FileText, Video, Clock } from "lucide-react";
+import { EnvelopeIcon, PhoneIcon, ChatBubbleLeftRightIcon, DocumentTextIcon, VideoCameraIcon, ClockIcon } from "@heroicons/react/24/outline";
 
 const Support = () => {
   return (
@@ -24,7 +24,7 @@ const Support = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <Card className="text-center">
               <CardContent className="pt-6">
-                <Mail className="w-12 h-12 text-brand-purple mx-auto mb-4" />
+                <EnvelopeIcon className="w-12 h-12 text-brand-purple mx-auto mb-4" />
                 <h3 className="font-semibold text-foreground mb-2">Email Support</h3>
                 <p className="text-muted-foreground mb-4">Get detailed help via email</p>
                 <p className="text-sm text-muted-foreground">Response within 24 hours</p>
@@ -33,7 +33,7 @@ const Support = () => {
 
             <Card className="text-center">
               <CardContent className="pt-6">
-                <MessageCircle className="w-12 h-12 text-brand-purple mx-auto mb-4" />
+                <ChatBubbleLeftRightIcon className="w-12 h-12 text-brand-purple mx-auto mb-4" />
                 <h3 className="font-semibold text-foreground mb-2">Live Chat</h3>
                 <p className="text-muted-foreground mb-4">Chat with our support team</p>
                 <p className="text-sm text-muted-foreground">Available 9 AM - 6 PM EST</p>
@@ -42,7 +42,7 @@ const Support = () => {
 
             <Card className="text-center">
               <CardContent className="pt-6">
-                <Phone className="w-12 h-12 text-brand-purple mx-auto mb-4" />
+                <PhoneIcon className="w-12 h-12 text-brand-purple mx-auto mb-4" />
                 <h3 className="font-semibold text-foreground mb-2">Phone Support</h3>
                 <p className="text-muted-foreground mb-4">Speak directly with an expert</p>
                 <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
@@ -133,7 +133,7 @@ const Support = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <FileText className="w-5 h-5" />
+                    <DocumentTextIcon className="w-5 h-5" />
                     Documentation
                   </CardTitle>
                 </CardHeader>
@@ -158,7 +158,7 @@ const Support = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Video className="w-5 h-5" />
+                    <VideoCameraIcon className="w-5 h-5" />
                     Video Tutorials
                   </CardTitle>
                 </CardHeader>
@@ -179,7 +179,7 @@ const Support = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Clock className="w-5 h-5" />
+                    <ClockIcon className="w-5 h-5" />
                     Support Hours
                   </CardTitle>
                 </CardHeader>

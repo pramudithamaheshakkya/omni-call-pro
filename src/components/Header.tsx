@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,8 +10,12 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
@@ -24,7 +29,7 @@ const Header = () => {
               />
             </div>
             
-            <NavigationMenu className="hidden md:flex">
+            <NavigationMenu className="hidden lg:flex">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuLink href="/" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
@@ -154,6 +159,12 @@ const Header = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
+                  <NavigationMenuLink href="/blog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
+                    Blog
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
                   <NavigationMenuLink href="/about-us" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2">
                     About Us
                   </NavigationMenuLink>
@@ -170,6 +181,98 @@ const Header = () => {
             <Button className="bg-gradient-primary hover:opacity-90 transition-opacity">
               Get Started
             </Button>
+            
+            {/* Mobile Menu */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="lg:hidden">
+                <Button variant="ghost" size="sm">
+                  <Bars3Icon className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-80">
+                <div className="flex flex-col space-y-6 pt-6">
+                  <a href="/" className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                    Home
+                  </a>
+                  
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Features</h3>
+                    <div className="grid gap-3 pl-4">
+                      <a href="/crm" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        CRM
+                      </a>
+                      <a href="/campaign-management" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Campaign Management
+                      </a>
+                      <a href="/omnichannel" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Omni-Channel
+                      </a>
+                      <a href="/workflow-automation" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Workflow Automation
+                      </a>
+                      <a href="/reports" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Reports & Dashboards
+                      </a>
+                      <a href="/ai" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        AI
+                      </a>
+                      <a href="/ai-agent" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        AI Agent
+                      </a>
+                      <a href="/integration" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Integration
+                      </a>
+                      <a href="/workflow-management" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Workflow Management
+                      </a>
+                      <a href="/access-control" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Access Control
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Product</h3>
+                    <div className="grid gap-3 pl-4">
+                      <a href="/edge" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Edge
+                      </a>
+                      <a href="/cloud" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Cloud
+                      </a>
+                      <a href="/enterprise" className="text-sm text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                        Enterprise
+                      </a>
+                    </div>
+                  </div>
+
+                  <a href="/use-case" className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                    Use Case
+                  </a>
+                  
+                  <a href="/contact" className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                    Contact Us
+                  </a>
+                  
+                  <a href="/blog" className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                    Blog
+                  </a>
+                  
+                  <a href="/about-us" className="text-lg font-medium text-foreground hover:text-muted-foreground transition-colors" onClick={() => setIsOpen(false)}>
+                    About Us
+                  </a>
+
+                  <div className="flex flex-col space-y-3 pt-6 border-t">
+                    <Button variant="outline" className="w-full">
+                      Contact Sales
+                    </Button>
+                    <Button className="w-full bg-gradient-primary hover:opacity-90 transition-opacity">
+                      Get Started
+                    </Button>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
