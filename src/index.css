@@ -38,27 +38,34 @@ All colors MUST be HSL.
 
     --radius: 12px;
 
-    /* Custom design tokens inspired by Monday.com */
-    --brand-purple: 262 83% 58%;
-    --brand-purple-light: 262 83% 68%;
-    --brand-blue: 214 100% 60%;
-    --brand-green: 142 76% 36%;
-    --brand-orange: 25 95% 53%;
-    --brand-pink: 328 86% 70%;
+    /* Monday.com inspired design tokens */
+    --monday-purple: 102 68% 74%;
+    --monday-blue: 214 100% 60%; 
+    --monday-green: 142 76% 36%;
+    --monday-orange: 25 95% 53%;
+    --monday-pink: 328 86% 70%;
+    --monday-red: 0 85% 60%;
+    --monday-yellow: 47 100% 65%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-purple)), hsl(var(--brand-blue)));
-    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(214 100% 60%));
+    /* Main brand colors matching Monday.com */
+    --brand-primary: 102 68% 74%;
+    --brand-secondary: 214 100% 60%;
+    --brand-accent: 328 86% 70%;
+    
+    /* Gradients - Monday.com style */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--monday-purple)), hsl(var(--monday-blue)));
+    --gradient-hero: linear-gradient(135deg, hsl(102 68% 74%), hsl(214 100% 60%));
     --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(250 60% 98%));
+    --gradient-cta: linear-gradient(135deg, hsl(214 100% 60%), hsl(102 68% 74%));
     
-    /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(262 83% 58% / 0.1), 0 2px 4px -1px hsl(262 83% 58% / 0.06);
-    --shadow-card: 0 10px 15px -3px hsl(262 83% 58% / 0.1), 0 4px 6px -2px hsl(262 83% 58% / 0.05);
-    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.15);
+    /* Shadows - softer, more Monday.com like */
+    --shadow-soft: 0 2px 8px hsl(220 15% 25% / 0.08);
+    --shadow-card: 0 4px 16px hsl(220 15% 25% / 0.12);
+    --shadow-glow: 0 8px 32px hsl(102 68% 74% / 0.15);
     
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Animations - smoother, more refined */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -122,6 +129,34 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Monday.com style gradient button */
+  .monday-gradient {
+    @apply bg-gradient-to-r from-[hsl(214,100%,60%)] to-[hsl(102,68%,74%)] text-white font-medium;
+    background-image: linear-gradient(135deg, hsl(214 100% 60%), hsl(102 68% 74%));
+  }
+  
+  /* Monday.com style cards */
+  .monday-card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  /* Monday.com style sections */
+  .monday-section {
+    @apply py-16 lg:py-24;
+  }
+  
+  /* Monday.com style typography */
+  .monday-heading {
+    @apply text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight;
+  }
+  
+  .monday-subheading {
+    @apply text-xl lg:text-2xl text-muted-foreground leading-relaxed;
   }
 }
